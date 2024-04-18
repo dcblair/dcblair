@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer {
+  @font-face {
+    font-family: 'Open Sans';
+    src: url(/assets/fonts/open_sans/OpenSans-VariableFont.ttf);
+  }
+
+  @font-face {
+    font-family: 'Nunito';
+    src: url(/assets/fonts/nunito/Nunito-VariableFont.ttf);
+  }
+}

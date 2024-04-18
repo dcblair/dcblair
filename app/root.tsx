@@ -4,10 +4,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from '@remix-run/react';
 
-import './tailwind.css'
-import LoadingSpinner from "./components/LoadingSpinner";
+import LoadingSpinner from './components/LoadingSpinner';
+
+import './tailwind.css';
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -33,8 +34,8 @@ export default function App() {
 
 export function HydrateFallback() {
   return (
-    <div className="w-full h-full flex items-center sm:justify-center md:pt-28">
-      <LoadingSpinner/>
+    <div className="flex h-full w-full flex-col items-center sm:justify-center md:pt-48">
+      <LoadingSpinner />
       <div className="mt-4">
         <p>Just a moment.</p>
       </div>
