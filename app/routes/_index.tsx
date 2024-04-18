@@ -27,10 +27,10 @@ export default function Index() {
       </ul>
 
         <div className="w-full flex flex-end">
-          <img className="rounded-full w-64" src="../../public/assets/profile_500.png" alt="image of devin blair wearing glasses and a jacket" />
+          <img className="rounded-full w-64" src="../../public/assets/profile_500.png" alt="devin blair wearing glasses and a jacket" />
         </div>
         <div className="w-full flex flex-start">
-          <p>Welcome! My name's Devin Blair. I'm a Frontend Engineer. Thanks for visiting my site!</p>
+          <p>Welcome!</p>
         </div>
       </div>
   );
