@@ -4,13 +4,10 @@ This template leverages [Remix SPA Mode](https://remix.run/docs/en/main/future/s
 
 ## Setup
 
-```shellscript
-npx create-remix@latest --template remix-run/remix/templates/spa
-```
 
-## Development
+## Running Application
 
-You can develop your SPA app just like you would a normal Remix app, via:
+Run the repo in dev mode using the following command:
 
 ```shellscript
 npm run dev
@@ -35,13 +32,3 @@ npm run preview
 > [!IMPORTANT]
 >
 > `vite preview` is not designed for use as a production server
-
-### Deployment
-
-You can then serve your app from any HTTP server of your choosing. The server should be configured to serve multiple paths from a single root `/index.html` file (commonly called "SPA fallback"). Other steps may be required if the server doesn't directly support this functionality.
-
-For a simple example, you could use [sirv-cli](https://www.npmjs.com/package/sirv-cli):
-
-```shellscript
-npx sirv-cli build/client/ --single
-```

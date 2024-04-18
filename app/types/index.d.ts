@@ -1,0 +1,1 @@
+export type ComponentSize = 'xs' | 'sm' | 'med' | 'lg' | 'xl'

@@ -1,4 +1,3 @@
-import type { LinksFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
@@ -8,6 +7,7 @@ import {
 } from "@remix-run/react";
 
 import './tailwind.css'
+import LoadingSpinner from "./components/LoadingSpinner";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="min-h-screen bg-gradient-to-b from-slate-200 via-sky-100 to-slate-100">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -32,5 +32,12 @@ export default function App() {
 }
 
 export function HydrateFallback() {
-  return <p>Loading...</p>;
+  return (
+    <div className="w-full h-full flex items-center sm:justify-center md:pt-28">
+      <LoadingSpinner/>
+      <div className="mt-4">
+        <p>Just a moment.</p>
+      </div>
+    </div>
+  );
 }

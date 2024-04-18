@@ -10,28 +10,40 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="w-full flex flex-col items-center mt-9 p-8 md:p-16">
-      <div className="items-center flex flex-col mb-4">
-        <h1 className="font-bold text-2xl">Devin Blair</h1>
-        <h2 className="font-semibold text-xl">Frontend Engineer</h2>
+    <div className="w-full min-h-screen flex flex-col items-center p-8 md:py-24 md:px-44">
+      <div className="mb-10">
+        {/* Header */}
+        <div className="items-center flex space-y-4 flex-col mb-4">
+          <h1 className="font-bold tracking-widest text-3xl">Devin Blair</h1>
+          <h2 className="font-semibold text-xl">Frontend Engineer</h2>
+        </div>
+
+        {/* Navbar */}
+        <nav className="flex items-center space-x-4 p-2 text-xl tracking-widest leading-6">
+          <Link className="px-2.5 py-0.5 hover:focus:no-underline hover:underline focus:outline-none focus:border-3 focus:border-black" to="/">
+            About
+          </Link>
+          <div className="rounded-sm bg-black w-0.5 h-8" />
+          <Link className="px-2.5 py-0.5 hover:focus:no-underline hover:underline focus:outline-none focus:border-3 focus:border-black" to="/resume">
+            Résumé
+          </Link>
+        </nav>
       </div>
 
-      <ul className="flex items-center space-x-4 p-2">
-        <Link className="px-2.5 py-0.5 hover:focus:no-underline hover:underline focus:outline-none focus:border-3 focus:border-black" to="/">
-          About
-        </Link>
-        <div className="bg-black w-4 h-full" />
-        <Link className="px-2.5 py-0.5 hover:focus:no-underline hover:underline focus:outline-none focus:border-3 focus:border-black" to="/resume">
-          Résumé
-        </Link>
-      </ul>
-
-        <div className="w-full flex flex-end">
-          <img className="rounded-full w-64" src="../../public/assets/profile_500.png" alt="devin blair wearing glasses and a jacket" />
+      <div className="grid grid-rows-2 grid-flow-col gap-16 w-full md:w-1/3 h-full space-y-6">
+        {/* Photo */}
+        <div className="row-span-4 flex flex-end items-center relative w-full">
+          <img className="relative rounded-full shadow-2xl w-64 md:w-80" src="/assets/profile_500.png" alt="devin blair wearing glasses and a jacket" />
+          <div className="-z-10 absolute rounded-full top-28 bg-gradient-to-br from-slate-200 to-black h-64 md:h-96 w-64 md:w-96" />
         </div>
-        <div className="w-full flex flex-start">
+
+        {/* Intro statement */}
+        <div className="row-start-2 row-end-2 row-span-4">
           <p>Welcome!</p>
+          <p>Thanks for visiting.</p>
+          <p>Here is something about me.</p>
         </div>
       </div>
+    </div>
   );
 }
