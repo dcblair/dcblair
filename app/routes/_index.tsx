@@ -30,15 +30,15 @@ export default function Index() {
         </nav>
       </div>
 
-      <div className="grid grid-rows-2 grid-flow-col gap-16 w-full md:w-1/3 h-full space-y-6">
+      <div className="flex flex-col md:grid md:grid-rows-2 md:grid-flow-col md:gap-16 w-full md:w-1/3 h-full md:space-y-8">
         {/* Photo */}
-        <div className="row-span-4 flex flex-end items-center relative w-full">
+        <div className="md:row-span-4 flex flex-end items-center relative w-full">
           <img className="relative rounded-full shadow-2xl w-64 md:w-80" src="/assets/profile_500.png" alt="devin blair wearing glasses and a jacket" />
-          <div className="-z-10 absolute rounded-full top-28 bg-gradient-to-br from-slate-200 to-black h-64 md:h-96 w-64 md:w-96" />
+          <div className="-z-10 absolute rounded-full top-28 bg-gradient-to-br from-slate-200 to-black h-64 w-64 md:h-96 md:w-96" />
         </div>
 
         {/* Intro statement */}
-        <div className="row-start-2 row-end-2 row-span-4">
+        <div className="flex md:row-start-2 md:row-end-2 md:row-span-4">
           <p>Welcome!</p>
           <p>Thanks for visiting.</p>
           <p>Here is something about me.</p>
