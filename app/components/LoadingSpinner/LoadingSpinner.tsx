@@ -1,4 +1,6 @@
-const LoadingSpinner = () => {
+import { memo } from 'react';
+
+const BaseLoadingSpinner = () => {
   return (
     <div className="w-h-20 relative flex h-20 items-center justify-center md:h-32 md:w-32">
       <div className="relative h-full w-full animate-spin rounded-full bg-gradient-to-l from-slate-100 to-slate-800" />
@@ -8,4 +10,4 @@ const LoadingSpinner = () => {
   );
 };
 
-export default LoadingSpinner;
+export const LoadingSpinner = memo(BaseLoadingSpinner);
