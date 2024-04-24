@@ -20,6 +20,10 @@ const StyledButton = classed(
         primary: '',
         icon: 'rounded-full',
       },
+      loading: {
+        true: '',
+        false: '',
+      },
     },
     defaultVariants: {
       variant: 'primary',
@@ -30,10 +34,11 @@ const StyledButton = classed(
 const BaseButton = ({
   children,
   variant = 'primary',
+  loading = false,
   ...rest
 }: ButtonProps) => {
   return (
-    <StyledButton variant={variant} {...rest}>
+    <StyledButton loading={loading} variant={variant} {...rest}>
       {children}
     </StyledButton>
   );
