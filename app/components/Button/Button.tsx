@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { ComponentPropsWithoutRef } from 'react';
 import { classed } from '@tw-classed/react';
 
 interface ButtonProps
@@ -7,9 +7,8 @@ interface ButtonProps
     ComponentPropsWithoutRef<'button'>,
     'children' | 'disabled' | 'onClick' | 'type'
   > {
-  loading: boolean;
-  icon: ReactNode;
-  variant: 'primary' | 'icon';
+  loading?: boolean;
+  variant?: 'primary' | 'icon';
 }
 
 const StyledButton = classed(
@@ -21,6 +20,10 @@ const StyledButton = classed(
         primary: '',
         icon: 'rounded-full',
       },
+      loading: {
+        true: '',
+        false: '',
+      },
     },
     defaultVariants: {
       variant: 'primary',
@@ -28,15 +31,17 @@ const StyledButton = classed(
   },
 );
 
-const BaseButton = ({ children, icon, variant, ...rest }: ButtonProps) => {
+const BaseButton = ({
+  children,
+  variant = 'primary',
+  loading = false,
+  ...rest
+}: ButtonProps) => {
   return (
-    <StyledButton variant={variant} {...rest}>
-      {icon}
+    <StyledButton loading={loading} variant={variant} {...rest}>
       {children}
     </StyledButton>
   );
 };
 
-const AppButton = memo(BaseButton);
-
-export default AppButton;
+export const Button = memo(BaseButton);

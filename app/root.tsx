@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
-import LoadingSpinner from './components/LoadingSpinner';
+import { LoadingSpinner } from '~/components';
 
 import './tailwind.css';
 

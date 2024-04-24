@@ -10,7 +10,7 @@ interface AppLinkProps {
 const BaseLink = ({ children, to }: AppLinkProps) => {
   return (
     <Link
-      className="focus:shadow-2 px-2.5 py-1 hover:underline focus:outline-none hover:focus:no-underline"
+      className="px-2.5 py-1 hover:underline focus:shadow-2 focus:outline-none hover:focus:no-underline"
       to={to}
     >
       {children}
@@ -18,6 +18,4 @@ const BaseLink = ({ children, to }: AppLinkProps) => {
   );
 };
 
-const AppLink = memo(BaseLink);
-
-export default AppLink;
+export const AppLink = memo(BaseLink);
