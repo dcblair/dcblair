@@ -1,5 +1,5 @@
 import type { MetaFunction } from '@remix-run/node';
-import { AppLink } from '~/components';
+import { AppLink, Button, Card } from '~/components';
 
 export const meta: MetaFunction = () => {
   return [
@@ -39,19 +39,25 @@ const Index = () => {
               src="/assets/profile_500.png"
               alt="devin blair wearing glasses and a jacket"
             />
-            <div className="absolute top-28 -z-10 h-64 w-64 rounded-full bg-gradient-to-br from-slate-200 to-black md:h-96 md:w-96" />
+            <div className="absolute top-28 -z-10 h-64 w-64 rotate-1 transform rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:h-96 md:w-96" />
           </div>
 
           {/* Intro statement */}
           <div className="flex flex-col items-center md:row-span-4 md:row-start-1 md:row-end-2">
             <div className="space-y-2 text-lg">
-              <h2 className="font-nunito text-2xl font-bold text-slate-900">
-                About
-              </h2>
-              <p>Thanks for visiting.</p>
-              <div className="md:ml-4">
-                <p>I&apos;m a Los Angeles-based Frontend Engineer.</p>
-              </div>
+              <Card
+                bgObject="left"
+                header={
+                  <h2 className="font-nunito text-2xl font-bold text-slate-900">
+                    About
+                  </h2>
+                }
+              >
+                <p>Thanks for visiting.</p>
+                <div className="md:ml-4">
+                  <p>I&apos;m a Los Angeles-based Frontend Engineer.</p>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
@@ -65,9 +71,12 @@ const Index = () => {
           </div>
           <div className="flex flex-col items-center md:row-span-4 md:row-start-1 md:row-end-2">
             {/* Comcast */}
-            <div className="text-lg">
-              <h3>Comcast Business - Frontend Engineer IV</h3>
-            </div>
+            <Card>
+              <div className="text-lg">
+                <h3>Comcast Business - Frontend Engineer IV</h3>
+              </div>
+            </Card>
+            <div className="absolute -z-10 h-64 w-64 rotate-1 transform rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed md:h-24 md:w-24" />
           </div>
 
           {/* Comcast Photo */}
@@ -91,8 +100,25 @@ const Index = () => {
               src="/"
               alt="canopy website screenshot"
             />
-            <div className="absolute -z-10 h-8 w-8 -rotate-12 transform rounded-full bg-gradient-to-br from-slate-200 to-black md:left-72 md:h-full md:w-2" />
+            <div className="absolute -z-10 h-8 w-8 -rotate-12 transform rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed md:left-72 md:h-full md:w-2" />
           </div>
+        </div>
+
+        {/* Contact */}
+        <div className="flex flex-col items-center space-y-8 text-lg">
+          <Card
+            header={
+              <h2 className="font-nunito text-2xl font-bold text-slate-900">
+                Contact
+              </h2>
+            }
+          >
+            <div className="flex space-x-3">
+              <Button variant="icon">LinkedIn</Button>
+              <Button variant="icon">GitHub</Button>
+              <Button variant="icon">Email</Button>
+            </div>
+          </Card>
         </div>
       </div>
     </div>
