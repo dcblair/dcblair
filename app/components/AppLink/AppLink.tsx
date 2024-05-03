@@ -1,9 +1,9 @@
 import { memo } from 'react';
-import type { ReactNode } from 'react';
+import type { ReactNode, RefAttributes } from 'react';
 import { Link } from '@remix-run/react';
 import { classed } from '@tw-classed/react';
 
-interface AppLinkProps {
+interface AppLinkProps extends RefAttributes<HTMLAnchorElement> {
   children: ReactNode;
   to: string;
   variant?: 'primary' | 'icon';
@@ -19,9 +19,14 @@ const StyledLink = classed(Link, '', {
   },
 });
 
-const BaseLink = ({ children, to, variant = 'primary' }: AppLinkProps) => {
+const BaseLink = ({
+  children,
+  to,
+  variant = 'primary',
+  ...rest
+}: AppLinkProps) => {
   return (
-    <StyledLink to={to} variant={variant}>
+    <StyledLink to={to} variant={variant} {...rest}>
       {children}
     </StyledLink>
   );
