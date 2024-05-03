@@ -5,7 +5,7 @@ import { AppLink } from '../AppLink/AppLink';
 const BaseFooter = () => {
   return (
     <>
-      <div className="sticky bottom-0 flex w-full flex-col items-center space-y-8 text-lg">
+      <div className="flex w-full grow-0 flex-col items-center text-lg md:fixed md:bottom-12">
         <Card
           header={
             <h2 className="font-nunito text-2xl font-bold text-slate-900">
