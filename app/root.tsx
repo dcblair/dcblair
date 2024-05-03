@@ -6,7 +6,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
-import { LoadingSpinner } from '~/components';
+import { Footer, LoadingSpinner, Header } from '~/components';
 
 import './tailwind.css';
 
@@ -29,7 +29,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="min-h-screen w-full p-8 md:px-44 md:py-24">
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  );
 }
 
 export function HydrateFallback() {
