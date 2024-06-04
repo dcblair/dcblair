@@ -19,7 +19,7 @@ const Index = () => {
             src="/assets/profile_500.png"
             alt="devin blair wearing glasses and a jacket"
           />
-          <div className="absolute right-12 top-12 -z-10 h-40 w-40 rotate-1 transform rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:top-28 md:h-96 md:w-96" />
+          <div className="animate-float absolute right-12 top-12 -z-10 h-40 w-40 rotate-1 transform rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:top-28 md:h-96 md:w-96" />
         </div>
 
         {/* Intro statement */}
@@ -28,12 +28,12 @@ const Index = () => {
             <Card
               bgObject="left"
               header={
-                <h2 className="font-nunito text-2xl font-bold text-slate-900">
+                <h2 className="text-2.5xl font-nunito font-bold text-slate-900">
                   About
                 </h2>
               }
             >
-              <div className="space-y-2 text-xl font-medium md:ml-4">
+              <div className="space-y-2 text-xl font-normal md:ml-4">
                 <p>I&apos;m a Los Angeles-based Frontend Engineer.</p>
                 <p>
                   Over the course of my career, I&apos;ve strived to create

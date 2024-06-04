@@ -6,7 +6,9 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
+import { ThemeContext } from './context/ThemeContext';
 import { Footer, LoadingSpinner, Header } from '~/components';
+import { useState } from 'react';
 
 import './tailwind.css';
 
@@ -29,12 +31,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  const [theme] = useState('motion');
+
   return (
-    <div className="flex min-h-screen w-full flex-col pt-8 md:px-44 md:pt-24">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <ThemeContext.Provider value={theme}>
+      <div className="flex min-h-screen w-full flex-col pt-8 md:px-44 md:pt-24">
+        <Header />
+        <Outlet />
+        <Footer />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
