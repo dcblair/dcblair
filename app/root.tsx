@@ -31,7 +31,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  const [theme] = useState('motion');
+  const [theme] = useState('hasMotion');
 
   return (
     <ThemeContext.Provider value={theme}>
