@@ -7,6 +7,7 @@ export default {
     extend: {
       animation: {
         float: 'float 6s ease-in-out infinite',
+        floatDeep: 'float 9s ease-in-out infinite',
       },
       borderWidth: {
         '3': '3px',
@@ -32,6 +33,10 @@ export default {
       float: {
         '0%, 100%': { transform: 'translateY(1%)' },
         '50%': { transform: 'translateY(-2%)' },
+      },
+      floatDeep: {
+        '0%, 100%': { transform: 'translateY(1.5%)' },
+        '50%': { transform: 'translateY(-3%)' },
       },
     },
   },
