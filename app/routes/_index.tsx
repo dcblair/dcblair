@@ -12,23 +12,24 @@ const Index = () => {
   return (
     <div className="grow-1 flex h-full w-full flex-col items-center md:space-y-52">
       <div className="flex h-full w-full flex-col items-center md:grid md:w-1/3 md:grid-flow-col md:grid-rows-2 md:gap-x-56 md:space-y-8">
-        {/* Profile Photo */}
         <div className="relative mb-8 mt-2 flex w-full flex-col items-center md:row-span-4">
+          {/* Profile photo */}
           <img
             className="relative w-44 rounded-full shadow-2xl md:w-80"
             src="/assets/profile_500.png"
             alt="devin blair wearing glasses and a jacket"
           />
-          <div className="animate-float absolute right-12 top-12 -z-10 h-40 w-40 rotate-1 transform rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:top-28 md:h-96 md:w-96" />
+          {/* Big floating globe */}
+          <div className="absolute right-12 top-12 -z-10 h-40 w-40 rotate-1 transform animate-float rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:top-28 md:h-96 md:w-96" />
         </div>
 
         {/* Intro statement */}
-        <div className="flex flex-col items-center md:row-span-4 md:row-start-1 md:row-end-2">
+        <div className="relative flex flex-col items-center md:row-span-4 md:row-start-1 md:row-end-2">
           <div className="space-y-2 text-lg">
             <Card
               bgObject="left"
               header={
-                <h2 className="text-2.5xl font-nunito font-bold text-slate-900">
+                <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
                   About
                 </h2>
               }
@@ -41,6 +42,8 @@ const Index = () => {
                 </p>
               </div>
             </Card>
+
+            <div className="absolute -z-10 h-40 w-40 rotate-1 transform animate-float rounded-full bg-gradient-to-br from-slate-600 to-black bg-fixed motion-reduce:animate-none md:-bottom-52 md:-right-56 md:h-24 md:w-24" />
           </div>
         </div>
       </div>
