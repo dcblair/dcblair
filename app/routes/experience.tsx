@@ -6,7 +6,7 @@ const Experience = () => {
     <div className="grow-1 flex h-full w-full flex-col items-center space-y-12">
       <Card
         header={
-          <h2 className="text-2.5xl font-nunito font-bold text-slate-900">
+          <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
             Experience
           </h2>
         }
@@ -28,7 +28,7 @@ const Experience = () => {
           <div className="absolute -z-10 h-64 w-64 rotate-1 transform rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed md:h-24 md:w-24" />
         </div>
 
-        {/* Comcast Photo */}
+        {/* Comcast photo */}
         <div className="flex-end relative flex w-full items-center md:row-span-1">
           <Card>
             {/* Improve accessibility */}
@@ -48,12 +48,32 @@ const Experience = () => {
           </Card>
         </div>
 
-        {/* Canopy Photo */}
+        {/* Canopy photo */}
         <div className="flex-end relative flex w-full items-center md:row-span-1">
           <img
             className="relative w-64 rounded-full shadow-2xl md:w-80"
             src="/"
             alt="canopy website screenshot"
+          />
+          <div className="absolute -z-10 h-8 w-8 -rotate-12 transform rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed md:left-72 md:h-full md:w-2" />
+        </div>
+
+        {/* Zeal */}
+        <div className="flex flex-col items-center md:row-span-1">
+          <Card>
+            <h3 className="text-xl font-semibold">
+              Zeal Enterprises - Lead Frontend Engineer
+            </h3>
+            <h4 className="text-lg font-medium">January 2021 - July 2021</h4>
+          </Card>
+        </div>
+
+        {/* Zeal photo */}
+        <div className="flex-end relative flex w-full items-center md:row-span-1">
+          <img
+            className="relative w-64 rounded-full shadow-2xl md:w-80"
+            src="/"
+            alt="zeal website icon"
           />
           <div className="absolute -z-10 h-8 w-8 -rotate-12 transform rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed md:left-72 md:h-full md:w-2" />
         </div>

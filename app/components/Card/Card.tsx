@@ -36,9 +36,9 @@ const CardBase = ({
         {children}
       </div>
       {bgObject === 'left' ? (
-        <div className="animate-float absolute -bottom-5 -left-3 -z-10 h-72 w-12 rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md" />
+        <div className="animate-floatSlow absolute -bottom-5 -left-3 -z-10 h-72 w-12 rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md" />
       ) : bgObject === 'right' ? (
-        <div className="animate-float absolute -bottom-5 -right-3 -z-10 h-72 w-12 rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md" />
+        <div className="absolute -bottom-5 -right-3 -z-10 h-72 w-12 rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md" />
       ) : null}
     </StyledCardWrapper>
   );

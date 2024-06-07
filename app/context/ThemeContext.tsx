@@ -1,3 +1,3 @@
 import { createContext } from 'react';
 
-export const ThemeContext = createContext('hasMotion');
+export const ThemeContext = createContext('light');
