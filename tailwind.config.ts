@@ -6,9 +6,9 @@ export default {
   theme: {
     extend: {
       animation: {
-        float: 'float 6s ease-in-out infinite',
-        floatFast: 'floatDeep 5.6s ease-in-out infinite',
-        floatSlow: 'float 7s ease-in-out infinite',
+        float: 'floatDeep 8.7s ease-in-out infinite',
+        floatFast: 'floatDeeper 5.6s ease-in-out infinite',
+        floatSlow: 'floatDeeper 9s ease-in-out infinite',
       },
       borderWidth: {
         '3': '3px',
@@ -38,6 +38,10 @@ export default {
       floatDeep: {
         '0%, 100%': { transform: 'translateY(1.2%)' },
         '50%': { transform: 'translateY(-2.4%)' },
+      },
+      floatDeeper: {
+        '0%, 100%': { transform: 'translateY(3%)' },
+        '50%': { transform: 'translateY(-3%)' },
       },
     },
   },

@@ -4,16 +4,18 @@ import { IconComcastBusiness } from '~/components/Icons';
 const Experience = () => {
   return (
     <div className="grow-1 flex h-full w-full flex-col items-center space-y-12">
-      <Card
-        header={
-          <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
-            Experience
-          </h2>
-        }
-      >
-        {' '}
-      </Card>
-      <div className="flex h-full w-full flex-col md:grid md:w-3/4 md:grid-flow-col md:grid-rows-2 md:gap-16 md:space-y-8">
+      <div>
+        <Card
+          header={
+            <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
+              Experience
+            </h2>
+          }
+        >
+          {' '}
+        </Card>
+      </div>
+      <div className="flex h-full w-full flex-col md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-4 md:gap-16 md:space-y-8">
         <div className="flex flex-col items-center md:row-span-1">
           {/* Comcast */}
           <Card>
@@ -29,7 +31,7 @@ const Experience = () => {
         </div>
 
         {/* Comcast photo */}
-        <div className="flex-end relative flex w-full items-center md:row-span-1">
+        <div className="flex h-full w-full items-center justify-center md:col-span-1 md:row-span-1">
           <Card>
             {/* Improve accessibility */}
             <AppLink to="https://business.comcast.com/" variant="icon">
@@ -39,7 +41,7 @@ const Experience = () => {
         </div>
 
         {/* Canopy */}
-        <div className="flex flex-col items-center md:row-span-1">
+        <div className="flex flex-col items-center md:col-span-1 md:row-span-1">
           <Card>
             <h3 className="text-xl font-semibold">
               Canopy Servicing - Software Engineer
@@ -49,7 +51,7 @@ const Experience = () => {
         </div>
 
         {/* Canopy photo */}
-        <div className="flex-end relative flex w-full items-center md:row-span-1">
+        <div className="flex-end relative flex w-full items-center md:col-span-1 md:row-span-1">
           <img
             className="relative w-64 rounded-full shadow-2xl md:w-80"
             src="/"

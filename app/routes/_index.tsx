@@ -11,16 +11,19 @@ export const meta: MetaFunction = () => {
 const Index = () => {
   return (
     <div className="grow-1 flex h-full w-full flex-col items-center md:space-y-52">
-      <div className="flex h-full w-full flex-col items-center md:grid md:w-1/3 md:grid-flow-col md:grid-rows-2 md:gap-x-56 md:space-y-8">
+      <div className="flex h-full w-full flex-col items-center md:grid md:grid-flow-col md:grid-rows-2 md:gap-x-56 md:space-y-8">
         <div className="relative mb-8 mt-2 flex w-full flex-col items-center md:row-span-4">
           {/* Profile photo */}
-          <img
-            className="relative w-44 rounded-full shadow-2xl md:w-80"
-            src="/assets/profile_500.png"
-            alt="devin blair wearing glasses and a jacket"
-          />
-          {/* Big floating globe */}
-          <div className="absolute right-12 top-12 -z-10 h-40 w-40 rotate-1 transform animate-float rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:top-28 md:h-96 md:w-96" />
+          <div className="w-44 md:w-60">
+            <img
+              className="relative rounded-full shadow-2xl"
+              src="/assets/profile_500.png"
+              alt="devin blair wearing glasses and a jacket"
+            />
+          </div>
+
+          {/* Big globe */}
+          <div className="absolute right-10 top-10 -z-10 h-40 w-40 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:top-28 md:h-72 md:w-72" />
         </div>
 
         {/* Intro statement */}
@@ -43,7 +46,8 @@ const Index = () => {
               </div>
             </Card>
 
-            <div className="absolute -z-10 h-40 w-40 rotate-1 transform animate-float rounded-full bg-gradient-to-br from-slate-600 to-black bg-fixed motion-reduce:animate-none md:-bottom-52 md:-right-56 md:h-24 md:w-24" />
+            {/* Small dark globe */}
+            <div className="absolute -z-10 h-40 w-40 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-black bg-fixed motion-reduce:animate-none md:-top-52 md:right-20 md:h-20 md:w-20" />
           </div>
         </div>
       </div>
