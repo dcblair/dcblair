@@ -1,4 +1,4 @@
-import { AppLink, Card } from '~/components';
+import { Link, Card } from '~/components';
 import { IconComcastBusiness } from '~/components/Icons';
 
 const Experience = () => {
@@ -15,8 +15,9 @@ const Experience = () => {
           {' '}
         </Card>
       </div>
-      <div className="flex h-full w-full flex-col md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-4 md:gap-16 md:space-y-8">
-        <div className="flex flex-col items-center md:row-span-1">
+
+      <div className="flex h-full w-full flex-col md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-16 md:space-y-8">
+        <div className="flex items-center">
           {/* Comcast */}
           <Card>
             <div>
@@ -31,17 +32,23 @@ const Experience = () => {
         </div>
 
         {/* Comcast photo */}
-        <div className="flex h-full w-full items-center justify-center md:col-span-1 md:row-span-1">
+        <div className="flex w-full items-center justify-center">
           <Card>
             {/* Improve accessibility */}
-            <AppLink to="https://business.comcast.com/" variant="icon">
+            <Link
+              className="flex items-center justify-center"
+              target="_blank"
+              rel="noreferrer"
+              to="https://business.comcast.com/"
+              variant="icon"
+            >
               <IconComcastBusiness />
-            </AppLink>
+            </Link>
           </Card>
         </div>
 
         {/* Canopy */}
-        <div className="flex flex-col items-center md:col-span-1 md:row-span-1">
+        <div className="flex items-center">
           <Card>
             <h3 className="text-xl font-semibold">
               Canopy Servicing - Software Engineer
@@ -51,7 +58,7 @@ const Experience = () => {
         </div>
 
         {/* Canopy photo */}
-        <div className="flex-end relative flex w-full items-center md:col-span-1 md:row-span-1">
+        <div className="flex-end relative flex w-full items-center">
           <img
             className="relative w-64 rounded-full shadow-2xl md:w-80"
             src="/"
@@ -61,7 +68,7 @@ const Experience = () => {
         </div>
 
         {/* Zeal */}
-        <div className="flex flex-col items-center md:row-span-1">
+        <div className="flex items-center">
           <Card>
             <h3 className="text-xl font-semibold">
               Zeal Enterprises - Lead Frontend Engineer
@@ -71,7 +78,7 @@ const Experience = () => {
         </div>
 
         {/* Zeal photo */}
-        <div className="flex-end relative flex w-full items-center md:row-span-1">
+        <div className="flex-end relative flex w-full items-center">
           <img
             className="relative w-64 rounded-full shadow-2xl md:w-80"
             src="/"
