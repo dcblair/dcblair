@@ -12,7 +12,7 @@ const StyledLink = classed(RemixLink, '', {
   variants: {
     variant: {
       primary:
-        'px-2.5 py-1 hover:underline focus:shadow-2 focus:outline-none hover:focus:no-underline',
+        'px-2.5 py-1 hover:underline focus:shadow-2 focus:outline-black hover:focus:no-underline',
       icon: 'px-3 py-2 focus:outline-2 focus:outline-black rounded-none',
     },
   },
@@ -20,10 +20,13 @@ const StyledLink = classed(RemixLink, '', {
 
 const BaseLink = forwardRef(
   (
-    props: LinkProps & RemixLinkProps & RefAttributes<HTMLAnchorElement>,
+    {
+      variant = 'primary',
+      ...props
+    }: LinkProps & RemixLinkProps & RefAttributes<HTMLAnchorElement>,
     ref: Ref<HTMLAnchorElement>,
   ) => {
-    return <StyledLink ref={ref} {...props} />;
+    return <StyledLink ref={ref} variant={variant} {...props} />;
   },
 );
 

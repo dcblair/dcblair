@@ -19,7 +19,7 @@ const Experience = () => {
       <div className="flex h-full w-full flex-col md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-16 md:space-y-8">
         <div className="flex items-center">
           {/* Comcast */}
-          <Card>
+          <Card className="shadow-xl">
             <div>
               <h3 className="text-xl font-semibold">
                 Comcast Business - Frontend Engineer IV
@@ -33,7 +33,7 @@ const Experience = () => {
 
         {/* Comcast photo */}
         <div className="flex w-full items-center justify-center">
-          <Card>
+          <Card variant="tertiary">
             {/* Improve accessibility */}
             <Link
               className="flex items-center justify-center"
@@ -58,12 +58,16 @@ const Experience = () => {
         </div>
 
         {/* Canopy photo */}
-        <div className="flex-end relative flex w-full items-center">
-          <img
-            className="relative w-64 rounded-full shadow-2xl md:w-80"
-            src="/"
-            alt="canopy website screenshot"
-          />
+        <div className="flex w-full items-center justify-center">
+          <Card variant="tertiary">
+            <Link
+              rel="noreferrer"
+              target="_blank"
+              to="https://www.canopyservicing.com/canopyos"
+            >
+              <img src="assets/canopy_logo.png" alt="canopy servicing logo" />
+            </Link>
+          </Card>
           <div className="absolute -z-10 h-8 w-8 -rotate-12 transform rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed md:left-72 md:h-full md:w-2" />
         </div>
 
@@ -78,12 +82,14 @@ const Experience = () => {
         </div>
 
         {/* Zeal photo */}
-        <div className="flex-end relative flex w-full items-center">
-          <img
-            className="relative w-64 rounded-full shadow-2xl md:w-80"
-            src="/"
-            alt="zeal website icon"
-          />
+        <div className="flex w-full items-center justify-center">
+          <Card className="flex items-center justify-center" variant="tertiary">
+            <img
+              className="h-32 w-32"
+              src="assets/zeal_logo.jpg"
+              alt="zeal website logo"
+            />
+          </Card>
           <div className="absolute -z-10 h-8 w-8 -rotate-12 transform rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed md:left-72 md:h-full md:w-2" />
         </div>
       </div>
