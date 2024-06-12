@@ -11,7 +11,7 @@ export const meta: MetaFunction = () => {
 const Index = () => {
   return (
     <div className="grow-1 flex h-full w-full flex-col items-center md:space-y-52">
-      <div className="flex h-full w-full flex-col items-center md:grid md:grid-flow-col md:grid-rows-2 md:gap-x-56 md:space-y-8">
+      <div className="flex h-full w-full flex-col items-center md:grid md:grid-flow-col md:grid-rows-2 md:gap-x-36 md:space-y-8">
         <div className="relative mb-8 mt-2 flex w-full flex-col items-center md:row-span-4">
           {/* Profile photo */}
           <div className="w-44 md:w-60">
@@ -37,7 +37,7 @@ const Index = () => {
                 </h2>
               }
             >
-              <div className="space-y-2 text-xl font-normal md:ml-4">
+              <div className="space-y-2 font-normal md:ml-4 md:text-lg">
                 <p>I&apos;m a Los Angeles-based Frontend Engineer.</p>
                 <p>
                   Over the course of my career, I&apos;ve strived to create
