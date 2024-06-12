@@ -11,19 +11,17 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
-const StyledCardWrapper = classed(
-  'div',
-  'z-10 border p-6 backdrop-blur-md md:p-8',
-  {
-    variants: {
-      variant: {
-        primary: 'border-black/5 bg-white/30 shadow-sm',
-        secondary: 'border-black/5 bg-white/40 shadow-sm',
-        tertiary: 'flex items-center justify-center bg-white shadow-md',
-      },
+const StyledCardWrapper = classed('div', 'z-10 border backdrop-blur-md', {
+  variants: {
+    variant: {
+      primary: 'border-black/5 bg-white/30 shadow-sm p-6 md:p-8',
+      secondary:
+        'border-black/5 bg-white/20 shadow-sm px-4 py-1 md:px-8 md:py-2 rounded-md',
+      tertiary:
+        'flex items-center justify-center bg-white shadow-md p-2 md:p-8',
     },
   },
-);
+});
 
 const CardBase = ({
   bgObject = 'none',
@@ -54,7 +52,7 @@ const CardBase = ({
       {bgObject === 'left' ? (
         <div className="absolute -bottom-10 -left-3 -z-10 h-72 w-12 animate-float rounded-md bg-gradient-to-b from-slate-200 to-slate-500 shadow-md" />
       ) : bgObject === 'right' ? (
-        <div className="absolute -bottom-5 -right-3 -z-10 h-72 w-12 rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md" />
+        <div className="absolute -bottom-16 -right-3 -z-10 h-72 w-12 rounded-md bg-gradient-to-b from-slate-200 to-slate-600 shadow-md" />
       ) : null}
     </div>
   );
