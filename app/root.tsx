@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from '@remix-run/react';
 
 import { ThemeContext } from './context/ThemeContext';
@@ -32,13 +33,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const [theme] = useState('light');
+  const location = useLocation();
 
   return (
     <ThemeContext.Provider value={theme}>
       <div className="flex min-h-screen w-full flex-col py-8 md:px-44 md:pt-24">
         <Header />
         <Outlet />
-        <Footer />
+        <>{location?.pathname !== '/contact' && <Footer />}</>
       </div>
     </ThemeContext.Provider>
   );
