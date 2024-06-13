@@ -3,24 +3,26 @@ import { IconComcastBusiness } from '~/components/Icons';
 
 const Experience = () => {
   return (
-    <div className="grow-1 flex h-full w-full flex-col items-center md:space-y-12">
-      <div className="w-1/2">
+    <div className="grow-1 flex h-full w-full flex-col items-center p-6 md:space-y-12">
+      <div className="relative w-full md:w-1/2">
+        {/* Experience heading */}
         <Card
-          bgObject="right"
+          className=""
           header={
             <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
               Experience
             </h2>
           }
-        >
-          {' '}
-        </Card>
+        />
+
+        {/* Floating bar */}
+        <div className="invisible absolute -bottom-2 -right-20 -z-10 h-40 w-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 shadow-md md:visible" />
       </div>
 
-      <div className="flex h-full w-full flex-col p-8 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-16 md:space-y-8">
+      <div className="flex h-full w-full flex-col space-y-4 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-12">
         <div className="flex items-center">
           {/* Comcast */}
-          <Card className="shadow-xl">
+          <Card>
             <div>
               <h3 className="text-xl font-semibold">
                 Comcast Business - Frontend Engineer IV
@@ -34,20 +36,18 @@ const Experience = () => {
 
         {/* Comcast photo */}
         <div className="flex items-center justify-center">
-          <div className="w-1/2">
-            <Card variant="tertiary">
-              {/* Improve accessibility */}
-              <Link
-                className="flex items-center justify-center"
-                target="_blank"
-                rel="noreferrer"
-                to="https://business.comcast.com/"
-                variant="icon"
-              >
-                <IconComcastBusiness />
-              </Link>
-            </Card>
-          </div>
+          <Card className="w-full" variant="tertiary">
+            {/* Improve accessibility */}
+            <Link
+              className="flex w-full items-center justify-center"
+              target="_blank"
+              rel="noreferrer"
+              to="https://business.comcast.com/"
+              variant="icon"
+            >
+              <IconComcastBusiness />
+            </Link>
+          </Card>
         </div>
 
         {/* Canopy */}
@@ -62,17 +62,16 @@ const Experience = () => {
 
         {/* Canopy photo */}
         <div className="flex items-center justify-center">
-          <div className="w-1/2">
-            <Card variant="tertiary">
-              <Link
-                rel="noreferrer"
-                target="_blank"
-                to="https://www.canopyservicing.com/canopyos"
-              >
-                <img src="assets/canopy_logo.png" alt="canopy servicing logo" />
-              </Link>
-            </Card>
-          </div>
+          <Card className="w-full" variant="tertiary">
+            <Link
+              className="w-full"
+              rel="noreferrer"
+              target="_blank"
+              to="https://www.canopyservicing.com/canopyos"
+            >
+              <img src="assets/canopy_logo.png" alt="canopy servicing logo" />
+            </Link>
+          </Card>
           <div className="absolute -z-10 h-8 w-8 -rotate-12 transform rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed md:left-72 md:h-full md:w-2" />
         </div>
 
@@ -89,18 +88,13 @@ const Experience = () => {
 
         {/* Zeal photo */}
         <div className="flex items-center justify-center">
-          <div className="w-1/2">
-            <Card
-              className="flex items-center justify-center"
-              variant="tertiary"
-            >
-              <img
-                className="h-32 w-32"
-                src="assets/zeal_logo.jpg"
-                alt="zeal website logo"
-              />
-            </Card>
-          </div>
+          <Card className="w-full" variant="tertiary">
+            <img
+              className="h-32 w-32"
+              src="assets/zeal_logo.jpg"
+              alt="zeal website logo"
+            />
+          </Card>
         </div>
       </div>
     </div>
