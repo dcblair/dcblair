@@ -13,11 +13,11 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
 const StyledCardWrapper = classed('div', 'z-10 border backdrop-blur-md', {
   variants: {
     variant: {
-      primary: 'border-black/5 bg-white/30 shadow-sm p-6 md:p-8',
+      primary: 'border-black/5 bg-white/30 shadow-sm p-6 md:p-8 rounded-md',
       secondary:
         'border-black/5 bg-white/20 shadow-sm px-4 py-1 md:px-8 md:py-2 rounded-md',
       tertiary:
-        'flex items-center rounded-3xl justify-center bg-white shadow-md p-2 md:p-8',
+        'flex items-center rounded-2xl justify-center bg-white shadow-md p-2 md:p-8',
     },
   },
 });
