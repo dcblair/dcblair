@@ -28,9 +28,8 @@ const Index = () => {
 
         {/* Intro statement */}
         <div className="relative flex flex-col items-center md:row-span-4 md:row-start-1 md:row-end-2">
-          <div className="space-y-2 text-lg">
+          <div className="relative space-y-2 text-lg">
             <Card
-              bgObject="left"
               header={
                 <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
                   About
@@ -46,9 +45,11 @@ const Index = () => {
               </div>
             </Card>
 
-            {/* Small dark globe */}
-            <div className="absolute -z-10 h-40 w-40 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-black bg-fixed motion-reduce:animate-none md:-top-52 md:right-20 md:h-20 md:w-20" />
+            {/* Floating bar */}
+            <div className="absolute -bottom-16 -left-3 -z-10 h-72 w-12 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-500 shadow-md" />
           </div>
+          {/* Small dark globe */}
+          <div className="absolute -z-10 h-40 w-40 rotate-1 animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-black bg-fixed motion-reduce:animate-none md:-top-52 md:right-20 md:h-20 md:w-20" />
         </div>
       </div>
     </div>
