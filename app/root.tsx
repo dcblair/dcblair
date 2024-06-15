@@ -50,8 +50,8 @@ export function HydrateFallback() {
   return (
     <div className="flex h-full w-full flex-col items-center sm:justify-center md:pt-48">
       <LoadingSpinner />
-      <div className="mt-4">
-        <p>Just a moment.</p>
+      <div className="mt-8">
+        <p className="tracking-wider">just a moment. . .</p>
       </div>
     </div>
   );
