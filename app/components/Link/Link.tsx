@@ -5,7 +5,7 @@ import { classed } from '@tw-classed/react';
 import { RemixLinkProps } from '@remix-run/react/dist/components';
 
 interface LinkProps extends RefAttributes<HTMLAnchorElement> {
-  variant?: 'icon' | 'primary' | 'secondary';
+  variant?: 'icon' | 'primary';
 }
 
 const StyledLink = classed(RemixLink, '', {
@@ -13,8 +13,6 @@ const StyledLink = classed(RemixLink, '', {
     variant: {
       primary:
         'px-2.5 py-1 hover:underline focus:shadow-2 focus:outline-black hover:focus:no-underline',
-      secondary:
-        'px-2.5 py-1 hover:underline focus:shadow-2 focus:outline-black hover:focus:no-underline duration-2000 hover:bg-slate-600/20 hover:shadow-2xl hover:transition-all',
       icon: 'px-3 py-2 focus:outline-2 focus:outline-black rounded-none',
     },
   },

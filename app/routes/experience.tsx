@@ -3,7 +3,7 @@ import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 
 const Experience = () => {
   return (
-    <div className="grow-1 flex h-full w-full flex-col items-center p-2 md:space-y-12 md:p-6">
+    <div className="grow-1 flex size-full flex-col items-center p-2 md:space-y-12 md:p-6">
       <div className="relative w-full md:w-1/3">
         {/* Experience heading */}
         <Card
@@ -15,7 +15,7 @@ const Experience = () => {
         />
 
         {/* Ligher floating globe */}
-        <div className="invisible absolute -bottom-2 -right-20 -z-10 h-40 w-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 shadow-md md:visible" />
+        <div className="invisible absolute -bottom-2 -right-20 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 shadow-md md:visible" />
       </div>
 
       <div className="flex h-full w-full flex-col space-y-4 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-12">
@@ -52,7 +52,7 @@ const Experience = () => {
           </Card>
 
           {/* Floating globe */}
-          <div className="absolute -left-8 bottom-2 -z-10 h-64 w-64 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed md:h-24 md:w-24" />
+          <div className="absolute -left-8 bottom-2 -z-10 size-64 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed md:size-24" />
         </div>
 
         {/* Comcast photo */}
@@ -64,7 +64,7 @@ const Experience = () => {
             variant="icon"
           >
             <Card
-              className="w-full duration-2000 hover:bg-slate-600/20 hover:shadow-2xl hover:transition-all md:w-96"
+              className="h-32 w-[calc(100vw-16px)] duration-2000 hover:bg-slate-600/20 hover:shadow-2xl hover:transition-all md:h-60 md:w-96"
               variant="tertiary"
             >
               {/* TODO: Improve accessibility */}
@@ -117,7 +117,7 @@ const Experience = () => {
             to="https://www.canopyservicing.com/canopyos"
           >
             <Card
-              className="w-full duration-2000 hover:bg-slate-600/20 hover:shadow-2xl hover:transition-all md:w-96"
+              className="h-32 w-[calc(100vw-16px)] duration-2000 hover:bg-slate-600/20 hover:shadow-2xl hover:transition-all md:h-60 md:w-96"
               variant="tertiary"
             >
               <IconCanopyServicing />
@@ -159,17 +159,17 @@ const Experience = () => {
           </Card>
 
           {/* Another floating globe */}
-          <div className="absolute -z-10 h-8 w-8 animate-floatSlow rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed motion-reduce:animate-none md:-right-20 md:top-2 md:h-28 md:w-28" />
+          <div className="absolute -z-10 size-8 animate-floatSlow rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed motion-reduce:animate-none md:-right-20 md:top-2 md:size-28" />
         </div>
 
         {/* Zeal photo */}
         <div className="flex items-center justify-center">
           <Card
-            className="duration-2000 hover:shadow-2xl hover:transition-all md:w-96"
+            className="h-32 w-[calc(100vw-16px)] duration-2000 hover:shadow-2xl hover:transition-all md:h-60 md:w-96"
             variant="tertiary"
           >
             <img
-              className="h-32 w-32"
+              className="size-24 md:size-32"
               src="assets/zeal_logo.jpg"
               alt="zeal website logo"
             />
