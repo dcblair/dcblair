@@ -4,3 +4,4 @@ export * from './Footer/Footer';
 export * from './Header/Header';
 export * from './Link/Link';
 export * from './LoadingSpinner/LoadingSpinner';
+export * from './Tooltip/Tooltip';
