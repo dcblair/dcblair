@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => {
 
 const Index = () => {
   return (
-    <div className="grow-1 flex h-full w-full flex-col items-center md:space-y-52">
+    <div className="grow-1 flex h-full w-full flex-col items-center px-2 pb-2 md:space-y-52">
       <div className="flex h-full w-full flex-col items-center md:grid md:grid-flow-col md:grid-rows-2 md:gap-x-36 md:space-y-8">
         <div className="relative mb-8 mt-2 flex w-full flex-col items-center md:row-span-4">
           {/* Profile photo */}
@@ -46,10 +46,11 @@ const Index = () => {
             </Card>
 
             {/* Floating bar */}
-            <div className="absolute -bottom-16 -left-3 -z-10 h-72 w-12 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-500 shadow-md" />
+            <div className="invisible absolute -bottom-16 -left-3 -z-10 h-72 w-12 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-500 shadow-md md:visible" />
           </div>
-          {/* Small dark globe */}
-          <div className="absolute -z-10 h-40 w-40 rotate-1 animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-black bg-fixed motion-reduce:animate-none md:-top-52 md:right-20 md:h-20 md:w-20" />
+
+          {/* Small, dark floating globe */}
+          <div className="absolute -bottom-20 -left-4 -z-10 h-40 w-40 animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-slate-50 bg-fixed motion-reduce:animate-none md:-top-52 md:h-20 md:w-20 md:to-black" />
         </div>
       </div>
     </div>

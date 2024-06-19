@@ -4,7 +4,7 @@ import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 const Experience = () => {
   return (
     <div className="grow-1 flex size-full flex-col items-center p-2 md:space-y-12 md:p-6">
-      <div className="relative w-full md:w-1/3">
+      <div className="relative mb-4 w-full md:w-1/3">
         {/* Experience heading */}
         <Card
           header={
