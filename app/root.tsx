@@ -37,7 +37,7 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <div className="flex min-h-screen w-full flex-col py-8 md:px-44 md:pt-24">
+      <div className="flex min-h-screen w-full flex-col pt-8 md:px-44 md:pb-8 md:pt-24">
         <Header />
         <Outlet />
         <>{location?.pathname !== '/contact' && <Footer />}</>
