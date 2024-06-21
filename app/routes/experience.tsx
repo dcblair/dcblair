@@ -4,7 +4,7 @@ import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 const Experience = () => {
   return (
     <div className="grow-1 flex size-full flex-col items-center p-2 md:space-y-12 md:p-6">
-      <div className="relative mb-4 w-full md:w-1/3">
+      <div className="relative w-full md:w-1/3">
         {/* Experience heading */}
         <Card
           header={
@@ -12,13 +12,14 @@ const Experience = () => {
               Experience
             </h2>
           }
+          variant="secondary"
         />
 
         {/* Ligher floating globe */}
         <div className="invisible absolute -bottom-2 -right-20 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 shadow-md md:visible" />
       </div>
 
-      <div className="flex h-full w-full flex-col space-y-4 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-12">
+      <div className="flex h-full w-full flex-col space-y-4 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-8">
         <div className="relative flex items-center">
           {/* Comcast */}
           <Card>

@@ -8,31 +8,36 @@ import {
 
 const Contact = () => {
   return (
-    <div className="flex w-full flex-col items-center p-2 text-lg md:p-6">
-      <div className="relative mb-8 flex w-full justify-center">
+    <div className="mb-8 flex h-full w-full flex-col items-center p-2 text-lg md:p-6">
+      <div className="relative mb-10 flex w-full justify-center">
         <Card
           className="w-full md:w-1/3 md:rounded-md"
+          variant="secondary"
           header={
-            <h2 className="font-nunito text-2xl font-bold text-slate-900">
+            <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
               Contact
             </h2>
           }
         />
 
         {/* Floating globe */}
-        <div className="absolute right-72 top-2 -z-10 size-32 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-300 to-slate-900 md:size-64" />
+        <div className="absolute -top-10 right-72 -z-10 size-32 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-300 to-slate-900 md:size-64" />
+
+        {/* Floating bar */}
+        <div className="invisible absolute -bottom-16 left-[490px] -z-10 h-72 w-10 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md md:visible" />
       </div>
 
-      <div className="flex flex-col items-center justify-center space-y-3 md:flex-row md:space-x-2 md:space-y-0">
+      <div className="flex w-full flex-col items-center justify-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
         {/* LinkedIn icon */}
         <Link
+          className="w-full md:size-fit"
           rel="noreferrer"
           target="_blank"
           to="https://www.linkedin.com/in/devin-blair/"
           variant="icon"
         >
           <Card
-            className="flex w-64 items-center justify-center space-x-4 md:w-72"
+            className="flex h-24 w-full items-center justify-center space-x-4 duration-2000 hover:bg-slate-300/20 hover:shadow-2xl hover:transition-all md:w-72"
             variant="tertiary"
           >
             <Tooltip>
@@ -56,13 +61,14 @@ const Contact = () => {
 
         {/* Github */}
         <Link
+          className="w-full md:size-fit"
           rel="noreferrer"
           target="_blank"
           to="https://github.com/dcblair"
           variant="icon"
         >
           <Card
-            className="flex w-64 items-center justify-center space-x-4"
+            className="flex h-24 w-full items-center justify-center space-x-4 duration-2000 hover:bg-slate-300/20 hover:shadow-2xl hover:transition-all md:w-72"
             variant="tertiary"
           >
             <Tooltip>
@@ -86,13 +92,14 @@ const Contact = () => {
 
         {/* Email */}
         <Link
+          className="w-full md:size-fit"
           rel="noreferrer"
           target="_blank"
           to="mailto:devin.c.blair@gmail.com"
           variant="icon"
         >
           <Card
-            className="flex w-64 items-center justify-center space-x-4"
+            className="flex h-24 w-full items-center justify-center space-x-4 duration-2000 hover:bg-slate-300/20 hover:shadow-2xl hover:transition-all md:w-72"
             variant="tertiary"
           >
             <Tooltip>
@@ -125,7 +132,7 @@ const Contact = () => {
         </Link>
 
         {/* Ligher floating globe */}
-        <div className="invisible absolute bottom-48 left-80 -z-10 size-32 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 shadow-md md:visible" />
+        <div className="absolute bottom-56 left-72 -z-10 size-28 animate-floatSlow rounded-full bg-gradient-to-b from-slate-400 to-black shadow-md" />
       </div>
     </div>
   );
