@@ -36,7 +36,7 @@ const Index = () => {
                 </h2>
               }
             >
-              <div className="space-y-2 font-normal md:ml-4 md:text-lg">
+              <div className="space-y-2 text-base font-normal md:ml-4 md:text-lg">
                 <p>I&apos;m a Los Angeles-based Frontend Engineer.</p>
                 <p>
                   Over the course of my career, I&apos;ve strived to create
