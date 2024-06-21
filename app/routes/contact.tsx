@@ -21,7 +21,7 @@ const Contact = () => {
         />
 
         {/* Floating globe */}
-        <div className="absolute -top-10 right-72 -z-10 size-32 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-300 to-slate-900 md:size-64" />
+        <div className="absolute -top-10 left-72 -z-10 size-32 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-300 to-slate-900 md:right-72 md:size-64" />
 
         {/* Floating bar */}
         <div className="invisible absolute -bottom-16 left-[490px] -z-10 h-72 w-10 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md md:visible" />
@@ -132,7 +132,7 @@ const Contact = () => {
         </Link>
 
         {/* Ligher floating globe */}
-        <div className="absolute bottom-56 left-72 -z-10 size-28 animate-floatSlow rounded-full bg-gradient-to-b from-slate-400 to-black shadow-md" />
+        <div className="absolute right-72 -z-10 size-36 animate-floatSlow rounded-full bg-gradient-to-b from-slate-400 to-black shadow-md md:bottom-56 md:left-72" />
       </div>
     </div>
   );

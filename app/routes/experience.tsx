@@ -160,7 +160,7 @@ const Experience = () => {
           </Card>
 
           {/* Another floating globe */}
-          <div className="absolute -z-10 size-8 animate-floatSlow rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed motion-reduce:animate-none md:-right-20 md:top-2 md:size-28" />
+          <div className="absolute -right-8 -top-20 -z-10 size-28 animate-floatSlow rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed motion-reduce:animate-none md:-right-20 md:top-2" />
         </div>
 
         {/* Zeal photo */}
@@ -170,9 +170,9 @@ const Experience = () => {
             variant="tertiary"
           >
             <img
-              className="size-24 md:size-32"
+              className="size-24"
               src="assets/zeal_logo.jpg"
-              alt="zeal website logo"
+              alt="zeal official logo"
             />
           </Card>
         </div>
