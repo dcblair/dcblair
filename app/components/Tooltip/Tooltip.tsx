@@ -143,7 +143,7 @@ export const TooltipContent = forwardRef<
   return (
     <FloatingPortal>
       <div
-        className="z-50 rounded-md bg-slate-900 p-2 text-white shadow-xl"
+        className="z-50 rounded-md bg-slate-900 px-3 py-2 text-white shadow-xl"
         ref={ref}
         style={{ ...style, ...context.floatingStyles }}
         {...context.getFloatingProps(props)}
