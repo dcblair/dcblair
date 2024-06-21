@@ -48,10 +48,10 @@ export default function App() {
 
 export function HydrateFallback() {
   return (
-    <div className="flex size-full flex-col items-center sm:justify-center md:pt-48">
+    <div className="flex size-full flex-col items-center justify-center pt-24 md:pt-48">
       <LoadingSpinner />
       <div className="mt-8">
-        <p className="tracking-wider">just a moment. . .</p>
+        <p className="tracking-widest">just a moment. . .</p>
       </div>
     </div>
   );
