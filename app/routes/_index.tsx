@@ -17,7 +17,7 @@ const Index = () => {
           <div className="w-44 md:w-60">
             <img
               className="relative rounded-full shadow-2xl"
-              src="/assets/profile_500.png"
+              src="assets/profile_500.png"
               alt="devin blair wearing glasses and a jacket"
             />
           </div>
