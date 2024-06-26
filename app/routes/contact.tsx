@@ -24,7 +24,7 @@ const Contact = () => {
         <div className="absolute -top-10 left-72 -z-10 size-32 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-300 to-slate-900 md:right-72 md:size-64" />
 
         {/* Floating bar */}
-        <div className="invisible absolute -bottom-16 left-[490px] -z-10 h-72 w-10 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md md:visible" />
+        <div className="invisible absolute -bottom-16 right-[490px] -z-10 h-72 w-10 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-400 shadow-md md:visible" />
       </div>
 
       <div className="flex w-full flex-col items-center justify-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
