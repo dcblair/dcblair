@@ -14,16 +14,14 @@ const Index = () => {
       <div className="flex h-full w-full flex-col items-center md:grid md:grid-flow-col md:grid-rows-2 md:gap-x-36 md:space-y-8">
         <div className="relative mb-8 mt-2 flex w-full flex-col items-center md:row-span-4">
           {/* Profile photo */}
-          <div className="w-44 md:w-60">
-            <img
-              className="relative rounded-full shadow-2xl"
-              src="assets/profile_500.png"
-              alt="devin blair wearing glasses and a jacket"
-            />
-          </div>
+          <img
+            className="relative size-44 rounded-full shadow-2xl md:size-60"
+            src="assets/profile_500.png"
+            alt="devin blair wearing glasses and a jacket"
+          />
 
           {/* Big globe */}
-          <div className="absolute right-10 top-10 -z-10 h-40 w-40 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:top-28 md:h-72 md:w-72" />
+          <div className="absolute right-10 top-10 -z-10 size-40 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed md:top-28 md:size-72" />
         </div>
 
         {/* Intro statement */}
@@ -50,7 +48,7 @@ const Index = () => {
           </div>
 
           {/* Small, dark floating globe */}
-          <div className="absolute -bottom-20 -left-4 -z-10 h-40 w-40 animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-slate-50 bg-fixed motion-reduce:animate-none md:-top-52 md:h-20 md:w-20 md:to-black" />
+          <div className="absolute -bottom-20 -left-4 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-slate-50 bg-fixed motion-reduce:animate-none md:-top-52 md:size-20 md:to-black" />
         </div>
       </div>
     </div>
