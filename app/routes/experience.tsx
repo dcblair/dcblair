@@ -4,9 +4,10 @@ import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 const Experience = () => {
   return (
     <div className="grow-1 flex size-full flex-col items-center p-2 md:space-y-12 md:p-6">
-      <div className="relative w-full md:w-1/3">
+      <div className="relative mb-1 w-full md:w-fit">
         {/* Experience heading */}
         <Card
+          className="w-full md:w-[25rem]"
           header={
             <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
               Experience
@@ -16,10 +17,10 @@ const Experience = () => {
         />
 
         {/* Ligher floating globe */}
-        <div className="invisible absolute -bottom-2 -right-20 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 shadow-md md:visible" />
+        <div className="absolute -bottom-2 -right-20 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 bg-fixed shadow-md motion-reduce:animate-none" />
       </div>
 
-      <div className="flex h-full w-full flex-col space-y-4 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-8">
+      <div className="flex h-full w-full flex-col space-y-1 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-8">
         <div className="relative flex items-center">
           {/* Comcast */}
           <Card>
@@ -53,7 +54,7 @@ const Experience = () => {
           </Card>
 
           {/* Floating globe */}
-          <div className="absolute -left-8 bottom-2 -z-10 size-64 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed md:size-24" />
+          <div className="absolute -bottom-16 -left-8 -z-10 size-64 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed motion-reduce:animate-none md:size-24" />
         </div>
 
         {/* Comcast photo */}
