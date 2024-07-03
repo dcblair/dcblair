@@ -22,8 +22,38 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  typecheck:
+    name: typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Typecheck
+        run: npm run typecheck --if-present
+
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Test
+        run: npm run test -- --coverage
+
   deploy:
+    name: deploye
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
