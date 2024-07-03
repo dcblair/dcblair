@@ -1,5 +1,6 @@
 import type { MetaFunction } from '@remix-run/node';
 import { Card } from '~/components';
+import LazyLoad from 'react-lazyload';
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,16 +9,29 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+interface LazyImage {
+  alt: string;
+  className: string;
+  src: string;
+}
+
+const LazyImage = ({ alt, className, src }: LazyImage) => {
+  return (
+    <LazyLoad offset={100} once>
+      <img alt={alt} className={className} src={src} />
+    </LazyLoad>
+  );
+};
+
 const Index = () => {
   return (
     <div className="grow-1 flex w-full flex-col items-center px-2 pb-2">
       <div className="flex h-full w-full flex-col items-center md:mb-32 md:mt-12 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-1 md:gap-x-12 3xl:gap-x-48 4xl:w-3/5">
         <div className="relative mb-8 mt-2 flex w-full flex-col items-center md:row-span-1">
           {/* Profile photo */}
-          <img
+          <LazyImage
             alt="devin blair wearing glasses and a jacket"
             className="relative size-44 rounded-full shadow-2xl md:size-60"
-            loading="lazy"
             src="assets/profile_500.png"
           />
 
