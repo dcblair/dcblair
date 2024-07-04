@@ -14,7 +14,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
-    "types": ["@testing-library/jest-dom"],
+    "types": ["@testing-library/jest-dom", "vitest/globals"],
     "paths": {
       "~/*": ["./app/*"]
     },
