@@ -14,6 +14,9 @@ export default defineConfig({
     tsconfigPaths(),
   ],
   test: {
+    coverage: {
+      provider: 'v8',
+    },
     globals: true,
     environment: 'jsdom',
     setupFiles: './vitest.setup.ts',
