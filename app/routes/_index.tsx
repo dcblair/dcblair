@@ -4,8 +4,8 @@ import LazyLoad from 'react-lazyload';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'DCBlair' },
-    { name: 'description', content: 'Devin Blair - Frontend Engineer' },
+    { title: 'Devin C Blair' },
+    { name: 'description', content: 'Devin C Blair - Frontend Engineer' },
   ];
 };
 
@@ -30,7 +30,7 @@ const Index = () => {
         <div className="relative mb-8 mt-2 flex w-full flex-col items-center md:row-span-1">
           {/* Profile photo */}
           <LazyImage
-            alt="devin blair wearing glasses and a jacket"
+            alt="devin c blair wearing glasses and a jacket"
             className="relative size-44 rounded-full shadow-2xl md:size-60"
             src="assets/profile_500.png"
           />

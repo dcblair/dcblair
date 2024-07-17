@@ -6,7 +6,7 @@ const BaseHeader = () => {
     <div className="mb-6 flex w-full flex-col items-center md:mb-10">
       <div className="mb-4 md:mb-10">
         <h1 className="font-nunito text-3xl font-black tracking-wider text-slate-900 md:text-4xl">
-          Devin Blair
+          Devin C Blair
         </h1>
       </div>
 
