@@ -4,8 +4,8 @@ import LazyLoad from 'react-lazyload';
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'DCBlair' },
-    { name: 'description', content: 'Devin Blair - Frontend Engineer' },
+    { title: 'Devin C Blair' },
+    { name: 'description', content: 'Devin C Blair - Frontend Engineer' },
   ];
 };
 
