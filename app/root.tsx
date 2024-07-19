@@ -8,7 +8,7 @@ import {
 } from '@remix-run/react';
 
 import { ThemeContext } from './context/ThemeContext';
-import { Footer, LoadingSpinner, Header } from '~/components';
+import { Footer, LoadingSpinner, Header, Link } from '~/components';
 import { useState } from 'react';
 
 import './tailwind.css';
@@ -43,6 +43,20 @@ export default function App() {
         <>{location?.pathname !== '/contact' && <Footer />}</>
       </div>
     </ThemeContext.Provider>
+  );
+}
+
+export function ErrorBoundary({ error }: { error: Error }) {
+  console.error(error);
+
+  return (
+    <div className="size-screen flex flex-col items-center justify-center pt-24 md:pt-48">
+      <h1 className="font-nunito text-4xl font-bold">404</h1>
+      <p className="mt-8">The page you&apos;ve requested doesn&apos;t exist</p>
+      <Link to="/" className="mt-8 underline">
+        Return Home
+      </Link>
+    </div>
   );
 }
 
