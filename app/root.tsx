@@ -1,6 +1,5 @@
 import {
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -9,7 +8,7 @@ import {
 } from '@remix-run/react';
 
 import { ThemeContext } from './context/ThemeContext';
-import { Footer, LoadingSpinner, Header, Link } from '~/components';
+import { Footer, Header, Link } from '~/components';
 import { useState } from 'react';
 
 import './tailwind.css';
@@ -72,15 +71,5 @@ export function ErrorBoundary({ error }: { error: Error }) {
 }
 
 export function HydrateFallback() {
-  return (
-    <div className="flex size-full flex-col items-center justify-center pt-24 md:pt-48">
-      <Scripts />
-      <LiveReload />
-      <Meta />
-      <LoadingSpinner />
-      <div className="mt-8">
-        <p className="tracking-widest">just a moment. . .</p>
-      </div>
-    </div>
-  );
+  return null;
 }
