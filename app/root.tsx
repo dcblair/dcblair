@@ -1,5 +1,6 @@
 import {
   Links,
+  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -12,6 +13,16 @@ import { Footer, LoadingSpinner, Header, Link } from '~/components';
 import { useState } from 'react';
 
 import './tailwind.css';
+import { MetaFunction } from '@remix-run/node';
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Devin C Blair' },
+    {
+      description: 'Devin C Blair - Frontend Engineer',
+    },
+  ];
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -63,6 +74,9 @@ export function ErrorBoundary({ error }: { error: Error }) {
 export function HydrateFallback() {
   return (
     <div className="flex size-full flex-col items-center justify-center pt-24 md:pt-48">
+      <Scripts />
+      <LiveReload />
+      <Meta />
       <LoadingSpinner />
       <div className="mt-8">
         <p className="tracking-widest">just a moment. . .</p>
