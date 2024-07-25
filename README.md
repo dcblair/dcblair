@@ -1,34 +1,29 @@
-# templates/spa
+# General
 
-This template leverages [Remix SPA Mode](https://remix.run/docs/en/main/future/spa-mode) and the [Remix Vite Plugin](https://remix.run/docs/en/main/future/vite) to build your app as a Single-Page Application using [Client Data](https://remix.run/docs/en/main/guides/client-data) for all of your data loads and mutations.
-
-## Setup
-
+Thanks for visiting!
 
 ## Running Application
 
-Run the repo in dev mode using the following command:
+1. Fork and clone the repo
+
+2. Run the repo in dev mode using the following command:
 
 ```shellscript
 npm run dev
 ```
 
-## Production
+3. Navigate to localhost:5723
 
-When you are ready to build a production version of your app, `npm run build` will generate your assets and an `index.html` for the SPA.
+### Running Storybook
 
-```shellscript
-npm run build
-```
+You can view components using Storybook.
 
-### Preview
-
-You can preview the build locally with [vite preview](https://vitejs.dev/guide/cli#vite-preview) to serve all routes via the single `index.html` file:
+1. Run the following command:
 
 ```shellscript
-npm run preview
+npm run storybook
 ```
 
-> [!IMPORTANT]
->
-> `vite preview` is not designed for use as a production server
+2. Navigate to localhost:6006
+
+Nore information about Storybook [here](https://storybook.js.org)
