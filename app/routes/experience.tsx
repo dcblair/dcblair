@@ -17,7 +17,10 @@ const Experience = () => {
         />
 
         {/* Ligher floating globe */}
-        <div className="absolute -bottom-2 -right-20 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 bg-fixed shadow-md motion-reduce:animate-none" />
+        <div
+          aria-label="light floating globe"
+          className="absolute -bottom-2 -right-20 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 bg-fixed shadow-md motion-reduce:animate-none"
+        />
       </div>
 
       <div className="flex h-full w-full flex-col space-y-1 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-8">
@@ -54,12 +57,16 @@ const Experience = () => {
           </Card>
 
           {/* Floating globe */}
-          <div className="absolute -bottom-16 -left-8 -z-10 size-64 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed motion-reduce:animate-none md:size-24" />
+          <div
+            aria-label="floating globe"
+            className="absolute -bottom-16 -left-8 -z-10 size-64 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed motion-reduce:animate-none md:size-24"
+          />
         </div>
 
         {/* Comcast photo */}
         <div className="flex items-center justify-center">
           <Link
+            aria-label="Comcast Business"
             target="_blank"
             rel="noreferrer"
             to="https://business.comcast.com/"
@@ -114,6 +121,7 @@ const Experience = () => {
         {/* Canopy photo */}
         <div className="flex items-center justify-center">
           <Link
+            aria-label="Canopy Servicing"
             rel="noreferrer"
             target="_blank"
             to="https://www.canopyservicing.com/canopyos"
@@ -161,7 +169,10 @@ const Experience = () => {
           </Card>
 
           {/* Another floating globe */}
-          <div className="absolute -right-8 -top-20 -z-10 size-28 animate-floatSlow rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed motion-reduce:animate-none md:-right-20 md:top-2" />
+          <div
+            aria-label="another floating globe"
+            className="absolute -right-8 -top-20 -z-10 size-28 animate-floatSlow rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed motion-reduce:animate-none md:-right-20 md:top-2"
+          />
         </div>
 
         {/* Zeal photo */}
@@ -173,7 +184,7 @@ const Experience = () => {
             <img
               className="size-24"
               src="assets/zeal_logo.jpg"
-              alt="zeal official logo"
+              alt="Zeal official logo"
             />
           </Card>
         </div>
