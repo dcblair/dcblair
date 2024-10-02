@@ -19,6 +19,8 @@ const BaseFooter = () => {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
+                aria-label="LinkedIn"
+                aria-labelledby="tooltip-linkedin"
                 rel="noreferrer"
                 target="_blank"
                 to="https://www.linkedin.com/in/devin-blair/"
@@ -31,7 +33,7 @@ const BaseFooter = () => {
               </Link>
             </TooltipTrigger>
 
-            <TooltipContent>
+            <TooltipContent id="tooltip-linkedin">
               <span>LinkedIn</span>
             </TooltipContent>
           </Tooltip>
@@ -40,6 +42,8 @@ const BaseFooter = () => {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
+                aria-label="GitHub"
+                aria-labelledby="tooltip-github"
                 rel="noreferrer"
                 target="_blank"
                 to="https://github.com/dcblair"
@@ -52,7 +56,7 @@ const BaseFooter = () => {
               </Link>
             </TooltipTrigger>
 
-            <TooltipContent>
+            <TooltipContent id="tooltip-github">
               <span>GitHub</span>
             </TooltipContent>
           </Tooltip>
@@ -61,6 +65,8 @@ const BaseFooter = () => {
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
+                aria-label="Email"
+                aria-labelledby="tooltip-email"
                 rel="noreferrer"
                 target="_blank"
                 to="mailto:devin.c.blair@gmail.com"
@@ -83,7 +89,7 @@ const BaseFooter = () => {
               </Link>
             </TooltipTrigger>
 
-            <TooltipContent>
+            <TooltipContent id="tooltip-email">
               <span>Email</span>
             </TooltipContent>
           </Tooltip>
