@@ -18,8 +18,9 @@ const Experience = () => {
 
         {/* Ligher floating globe */}
         <div
-          aria-label="light floating globe"
+          aria-label="floating circle"
           className="absolute -bottom-2 -right-20 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 bg-fixed shadow-md motion-reduce:animate-none"
+          role="img"
         />
       </div>
 
@@ -58,8 +59,9 @@ const Experience = () => {
 
           {/* Floating globe */}
           <div
-            aria-label="floating globe"
+            aria-label="second floating circle"
             className="absolute -bottom-16 -left-8 -z-10 size-64 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed motion-reduce:animate-none md:size-24"
+            role="img"
           />
         </div>
 
@@ -170,8 +172,9 @@ const Experience = () => {
 
           {/* Another floating globe */}
           <div
-            aria-label="another floating globe"
+            aria-label="third floating globe"
             className="absolute -right-8 -top-20 -z-10 size-28 animate-floatSlow rounded-full bg-gradient-to-br from-slate-200 to-black bg-fixed motion-reduce:animate-none md:-right-20 md:top-2"
+            role="img"
           />
         </div>
 

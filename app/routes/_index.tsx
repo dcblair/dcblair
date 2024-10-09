@@ -36,7 +36,11 @@ const Index = () => {
           />
 
           {/* Big globe */}
-          <div className="absolute right-10 top-10 -z-10 size-40 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed motion-reduce:animate-none md:right-28 md:top-12 md:size-72 4xl:right-40" />
+          <div
+            aria-label="large, floating circle"
+            className="absolute right-10 top-10 -z-10 size-40 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-100 to-black bg-fixed motion-reduce:animate-none md:right-28 md:top-12 md:size-72 4xl:right-40"
+            role="img"
+          />
         </div>
 
         {/* Intro statement */}
@@ -59,10 +63,18 @@ const Index = () => {
             </Card>
 
             {/* Floating bar */}
-            <div className="invisible absolute -bottom-10 -left-3 -z-10 h-72 w-12 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-500 bg-fixed shadow-md motion-reduce:animate-none md:visible" />
+            <div
+              aria-label="floating rounded rectangle"
+              className="invisible absolute -bottom-10 -left-3 -z-10 h-72 w-12 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-500 bg-fixed shadow-md motion-reduce:animate-none md:visible"
+              role="img"
+            />
 
             {/* Small, dark floating globe */}
-            <div className="absolute -bottom-20 -left-4 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-slate-50 bg-fixed motion-reduce:animate-none md:bottom-96 md:left-[180px] md:size-20 md:to-black" />
+            <div
+              aria-label="small, floating circle"
+              className="absolute -bottom-20 -left-4 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-br from-gray-500 to-slate-50 bg-fixed motion-reduce:animate-none md:bottom-96 md:left-[180px] md:size-20 md:to-black"
+              role="img"
+            />
           </div>
         </div>
       </div>
