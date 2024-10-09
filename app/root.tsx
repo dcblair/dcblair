@@ -32,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="min-h-screen bg-gradient-to-b from-slate-200 via-sky-100 to-slate-100">
+      <body className="min-h-screen overflow-x-hidden bg-gradient-to-b from-slate-200 via-sky-100 to-slate-100">
         {children}
         <ScrollRestoration />
         <Scripts />
