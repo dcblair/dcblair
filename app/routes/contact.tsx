@@ -15,10 +15,18 @@ const Contact = () => {
         />
 
         {/* Light floating globe */}
-        <div className="absolute -left-4 top-16 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-br from-slate-300 to-slate-900 bg-fixed motion-reduce:animate-none md:-left-[14.7rem] md:-top-[3.7rem] md:size-64" />
+        <div
+          aria-label="floating circle"
+          className="absolute -left-4 top-16 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-br from-slate-300 to-slate-900 bg-fixed motion-reduce:animate-none md:-left-[14.7rem] md:-top-[3.7rem] md:size-64"
+          role="img"
+        />
 
         {/* Floating bar */}
-        <div className="invisible absolute -bottom-20 -z-10 h-72 w-8 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-400 bg-fixed shadow-md motion-reduce:animate-none md:visible md:-right-4" />
+        <div
+          aria-label="floating rounded rectangle"
+          className="invisible absolute -bottom-20 -z-10 h-72 w-8 animate-floatSlow rounded-md bg-gradient-to-b from-slate-200 to-slate-400 bg-fixed shadow-md motion-reduce:animate-none md:visible md:-right-4"
+          role="img"
+        />
       </div>
 
       <div className="flex w-full flex-col items-center justify-center space-y-1 md:flex-row md:space-x-4 md:space-y-0">
@@ -102,10 +110,18 @@ const Contact = () => {
         </Link>
 
         {/* Darker floating globe */}
-        <div className="absolute -right-2 bottom-8 -z-10 size-24 animate-floatSlow rounded-full bg-gradient-to-b from-slate-600 to-black bg-fixed shadow-md motion-reduce:animate-none md:bottom-20 md:right-80 3xl:bottom-96 3xl:right-96" />
+        <div
+          aria-label="floating circle"
+          className="absolute -right-2 bottom-8 -z-10 size-24 animate-floatSlow rounded-full bg-gradient-to-b from-slate-600 to-black bg-fixed shadow-md motion-reduce:animate-none md:bottom-20 md:right-80 3xl:bottom-96 3xl:right-96"
+          role="img"
+        />
 
         {/* Darkest floating globe */}
-        <div className="absolute -z-10 size-16 animate-floatSlow rounded-full bg-gradient-to-b from-slate-700 to-black bg-fixed shadow-lg motion-reduce:animate-none md:left-60 md:top-40 3xl:left-96 3xl:top-60" />
+        <div
+          aria-label="floating circle"
+          className="absolute -z-10 size-16 animate-floatSlow rounded-full bg-gradient-to-b from-slate-700 to-black bg-fixed shadow-lg motion-reduce:animate-none md:left-60 md:top-40 3xl:left-96 3xl:top-60"
+          role="img"
+        />
       </div>
     </div>
   );
