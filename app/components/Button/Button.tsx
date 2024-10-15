@@ -5,10 +5,11 @@ import { classed } from '@tw-classed/react';
 interface ButtonProps
   extends Pick<
     ComponentPropsWithoutRef<'button'>,
-    'children' | 'disabled' | 'onClick' | 'type'
+    'children' | 'className' | 'disabled' | 'onClick' | 'type'
   > {
   loading?: boolean;
-  variant?: 'primary' | 'icon';
+  iconOnly?: boolean;
+  variant?: 'primary' | 'secondary';
 }
 
 const StyledButton = classed(
@@ -18,10 +19,14 @@ const StyledButton = classed(
     variants: {
       variant: {
         primary: '',
-        icon: 'rounded-full',
+        secondary: '',
       },
       loading: {
         true: '',
+        false: '',
+      },
+      iconOnly: {
+        true: 'rounded-full',
         false: '',
       },
     },
@@ -33,12 +38,18 @@ const StyledButton = classed(
 
 const BaseButton = ({
   children,
-  variant = 'primary',
+  iconOnly = false,
   loading = false,
+  variant = 'primary',
   ...rest
 }: ButtonProps) => {
   return (
-    <StyledButton loading={loading} variant={variant} {...rest}>
+    <StyledButton
+      iconOnly={iconOnly}
+      loading={loading}
+      variant={variant}
+      {...rest}
+    >
       {children}
     </StyledButton>
   );
