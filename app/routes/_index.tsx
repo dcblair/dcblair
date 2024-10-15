@@ -32,7 +32,7 @@ const Index = () => {
           <LazyImage
             alt="devin c blair wearing glasses and a jacket"
             className="relative size-44 rounded-full shadow-2xl md:size-60"
-            src="assets/profile_500.png"
+            src="assets/images/profile_500.png"
           />
 
           {/* Big globe */}
