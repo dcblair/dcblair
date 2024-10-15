@@ -1,19 +1,23 @@
-import { Suspense, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { Button } from '~/components';
 // enables link annotations
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 // enables text layer for accessibility, selection, search
 import 'react-pdf/dist/Page/TextLayer.css';
-import '~/utils/promise-polyfill';
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString();
 
 const Resume = () => {
   const [pageNumber, setPageNumber] = useState(1);
+
+  useEffect(() => {
+    (async () => {
+      pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+        'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
+        import.meta.url,
+      ).toString();
+    })();
+  }, []);
+
   const handlePageChange = (direction: 'back' | 'forward') => {
     setPageNumber((prevPageNumber) => {
       if (direction === 'forward' && prevPageNumber < 2) {
