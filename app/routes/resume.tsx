@@ -5,19 +5,7 @@ import { Button } from '~/components';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 // enables text layer for accessibility, selection, search
 import 'react-pdf/dist/Page/TextLayer.css';
-
-// @ts-expect-error This does not exist outside of polyfill which this is doing
-if (!Promise.withResolvers) {
-  // @ts-expect-error This does not exist outside of polyfill which this is doing
-  Promise.withResolvers = function () {
-    let resolve, reject;
-    const promise = new Promise((res, rej) => {
-      resolve = res;
-      reject = rej;
-    });
-    return { promise, resolve, reject };
-  };
-}
+import '~/utils/promise-polyfill';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/legacy/build/pdf.worker.min.mjs',

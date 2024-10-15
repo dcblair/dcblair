@@ -21,9 +21,4 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './vitest.setup.ts',
   },
-  resolve: {
-    alias: {
-      'pdfjs-dist': 'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
-    },
-  },
 });
