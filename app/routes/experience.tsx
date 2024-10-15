@@ -186,7 +186,7 @@ const Experience = () => {
           >
             <img
               className="size-24"
-              src="assets/zeal_logo.jpg"
+              src="assets/images/zeal_logo.jpg"
               alt="Zeal official logo"
             />
           </Card>
