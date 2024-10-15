@@ -1,16 +1,16 @@
 import { Suspense, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-// required for link annotations
-import 'react-pdf/dist/Page/AnnotationLayer.css';
-// required for text layer
-import 'react-pdf/dist/Page/TextLayer.css';
 import { Button } from '~/components';
+// enables link annotations
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+// enables text layer for accessibility, selection, search
+import 'react-pdf/dist/Page/TextLayer.css';
 
 // @ts-expect-error This does not exist outside of polyfill which this is doing
 if (typeof Promise.withResolvers === 'undefined') {
   if (window)
     // @ts-expect-error This does not exist outside of polyfill which this is doing
-    window.Promise.withResolvers = function () {
+    Promise.withResolvers = function () {
       let resolve, reject;
       const promise = new Promise((res, rej) => {
         resolve = res;
