@@ -15,6 +15,8 @@ const BaseHeader = () => {
         <div className="h-8 w-0.5 rounded-sm bg-black" />
         <Link to="/experience">Experience</Link>
         <div className="h-8 w-0.5 rounded-sm bg-black" />
+        <Link to="/resume">Résumé</Link>
+        <div className="h-8 w-0.5 rounded-sm bg-black" />
         <Link to="/contact">Contact</Link>
       </nav>
     </div>
