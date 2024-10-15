@@ -7,7 +7,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
 // @ts-expect-error This does not exist outside of polyfill which this is doing
-if (typeof Promise.withResolvers === 'undefined') {
+if (!Promise.withResolvers) {
   // @ts-expect-error This does not exist outside of polyfill which this is doing
   Promise.withResolvers = function () {
     let resolve, reject;
