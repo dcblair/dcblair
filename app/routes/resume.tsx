@@ -1,19 +1,9 @@
 import { Suspense } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
-
-// @ts-expect-error This does not exist outside of polyfill which this is doing
-if (typeof Promise.withResolvers === 'undefined') {
-  if (window)
-    // @ts-expect-error This does not exist outside of polyfill which this is doing
-    window.Promise.withResolvers = function () {
-      let resolve, reject;
-      const promise = new Promise((res, rej) => {
-        resolve = res;
-        reject = rej;
-      });
-      return { promise, resolve, reject };
-    };
-}
+// required for link annotations
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+// required for text layer
+import 'react-pdf/dist/Page/TextLayer.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
@@ -26,6 +16,7 @@ const Resume = () => {
       <Suspense fallback={null}>
         <Document file="assets/files/devin_blair_resume_fr.pdf">
           <Page pageNumber={1} />
+          <Page pageNumber={2} />
         </Document>
       </Suspense>
     </div>
