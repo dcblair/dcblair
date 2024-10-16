@@ -60,7 +60,7 @@ const Resume = () => {
           </div>
           <Button
             aria-label="navigate forward"
-            className="hidden md:block"
+            className="hidden md:flex"
             iconOnly
             onClick={() => handlePageChange('forward')}
           >
