@@ -10,7 +10,7 @@ interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
 
 const StyledButton = classed(
   'button',
-  'shadow-xl hover:shadow-2xl hover:transition-colors focus:outline-2 focus:outline-sky-900',
+  'shadow-xl hover:shadow-2xl hover:transition-colors',
   {
     variants: {
       variant: {
@@ -22,7 +22,7 @@ const StyledButton = classed(
         true: 'before:content-[data-loading] before:animate-spin',
       },
       iconOnly: {
-        true: 'p-3 bg-white flex justify-center items-center rounded-full hover:outline-2 duration-1000 hover:bg-slate-700/20 focus:outline-2 focus:outline-sky-900',
+        true: 'p-3 bg-white flex justify-center items-center rounded-full hover:outline-2 duration-1000',
         false: '',
       },
     },
@@ -33,7 +33,8 @@ const StyledButton = classed(
       {
         variant: 'primary',
         iconOnly: true,
-        className: 'rounded-full size-8 md:size-16',
+        className:
+          'rounded-full size-8 md:size-16 focus:shadow-2 focus:outline-black focus:outline-offset-3',
       },
       {
         variant: 'secondary',
@@ -43,7 +44,7 @@ const StyledButton = classed(
       {
         variant: 'primary',
         iconOnly: false,
-        className: 'rounded-md',
+        className: 'rounded-md focus:outline-2 focus:outline-sky-900',
       },
       {
         variant: 'secondary',
