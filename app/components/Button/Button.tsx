@@ -8,25 +8,51 @@ interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
   variant?: 'primary' | 'secondary';
 }
 
-const StyledButton = classed('button', 'text-sky-100 font-medium', {
-  variants: {
-    variant: {
-      primary: 'bg-slate-500',
-      secondary: '',
+const StyledButton = classed(
+  'button',
+  'shadow-xl hover:shadow-2xl hover:transition-colors focus:outline-2 focus:outline-sky-900',
+  {
+    variants: {
+      variant: {
+        primary:
+          'bg-white text-sky-800 hover:bg-sky-800/10 focus:bg-sky-800/10',
+        secondary: '',
+      },
+      loading: {
+        true: 'before:content-[data-loading] before:animate-spin',
+      },
+      iconOnly: {
+        true: 'p-3 bg-white flex justify-center items-center rounded-full hover:outline-2 duration-1000 hover:bg-slate-700/20 focus:outline-2 focus:outline-sky-900',
+        false: '',
+      },
     },
-    loading: {
-      true: '',
-      false: '',
+    defaultVariants: {
+      variant: 'primary',
     },
-    iconOnly: {
-      true: 'p-3 size-8 md:size-16 flex items-center justify-center bg-slate-400 rounded-full hover:outline-2 hover:outline-sky-900 transition-all duration-1000 hover:bg-slate-400 focus:outline-2 focus:outline-sky-900',
-      false: '',
-    },
+    compoundVariants: [
+      {
+        variant: 'primary',
+        iconOnly: true,
+        className: 'rounded-full size-8 md:size-16',
+      },
+      {
+        variant: 'secondary',
+        iconOnly: true,
+        className: 'rounded-full size-8 md:size-16',
+      },
+      {
+        variant: 'primary',
+        iconOnly: false,
+        className: 'rounded-md',
+      },
+      {
+        variant: 'secondary',
+        iconOnly: false,
+        className: 'rounded-full',
+      },
+    ],
   },
-  defaultVariants: {
-    variant: 'primary',
-  },
-});
+);
 
 const BaseButton = ({
   children,

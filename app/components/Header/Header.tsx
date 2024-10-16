@@ -10,7 +10,7 @@ const BaseHeader = () => {
         </h1>
       </div>
 
-      <nav className="flex items-center space-x-3 p-2 text-base leading-6 tracking-widest md:space-x-4 md:text-lg">
+      <nav className="flex items-center space-x-1 p-2 text-sm leading-6 tracking-widest md:space-x-4 md:text-lg">
         <Link to="/">About</Link>
         <div className="h-8 w-0.5 rounded-sm bg-black" />
         <Link to="/experience">Experience</Link>
