@@ -48,7 +48,7 @@ const Resume = () => {
             </svg>
           </Button>
           <div className="w-full md:w-7/12" ref={divRef}>
-            <Document file="assets/files/devin_blair_resume_fr.pdf">
+            <Document file="./assets/files/devin_blair_resume_fr.pdf">
               <div className="hidden md:flex">
                 <Page pageNumber={pageNumber} width={width} />
               </div>
