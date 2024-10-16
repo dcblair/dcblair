@@ -22,7 +22,7 @@ const StyledButton = classed(
         true: 'before:content-[data-loading] before:animate-spin',
       },
       iconOnly: {
-        true: 'p-3 size-8 md:size-16 flex items-center bg-white justify-center rounded-full hover:outline-2 duration-1000 hover:bg-slate-700/20 focus:outline-2 focus:outline-sky-900',
+        true: 'p-3 bg-white flex justify-center items-center rounded-full hover:outline-2 duration-1000 hover:bg-slate-700/20 focus:outline-2 focus:outline-sky-900',
         false: '',
       },
     },

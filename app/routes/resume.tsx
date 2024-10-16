@@ -7,6 +7,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 // enables text layer for accessibility, selection, search
 import 'react-pdf/dist/Page/TextLayer.css';
 
+// need this for react-pdf to work
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
   import.meta.url,
@@ -33,7 +34,7 @@ const Resume = () => {
         <div className="flex w-full items-center justify-center space-x-4 px-4">
           <Button
             aria-label="page back"
-            className="hidden md:block"
+            className="hidden md:flex"
             iconOnly
             onClick={() => handlePageChange('back')}
           >
@@ -48,7 +49,7 @@ const Resume = () => {
           </Button>
           <div className="w-full md:w-7/12" ref={divRef}>
             <Document file="assets/files/devin_blair_resume_fr.pdf">
-              <div className="hidden md:block">
+              <div className="hidden md:flex">
                 <Page pageNumber={pageNumber} width={width} />
               </div>
               <div className="block space-y-2 md:hidden">
