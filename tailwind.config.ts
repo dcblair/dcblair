@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
 
-// TODO: Add custom animation for slow spinning
 export default {
   content: ['./app/**/*.{html,js,jsx,ts,tsx}'],
   theme: {

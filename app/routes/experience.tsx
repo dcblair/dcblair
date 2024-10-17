@@ -78,7 +78,6 @@ const Experience = () => {
               className="h-32 w-[calc(100vw-16px)] duration-2000 hover:bg-slate-600/20 hover:shadow-2xl hover:transition-all md:h-60 md:w-96"
               variant="tertiary"
             >
-              {/* TODO: Improve accessibility */}
               <IconComcastBusiness />
             </Card>
           </Link>
