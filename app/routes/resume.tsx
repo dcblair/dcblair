@@ -18,6 +18,8 @@ const Resume = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   const { width } = useResizeObserver({ ref: divRef });
 
+  // todo: add scroll prevention
+
   const handlePageChange = (direction: 'back' | 'forward') => {
     setPageNumber((prevPageNumber) => {
       if (direction === 'forward' && prevPageNumber < 2) {
@@ -28,6 +30,7 @@ const Resume = () => {
       return prevPageNumber - 1;
     });
   };
+
   return (
     <div className="grow-1 flex size-full flex-col items-center p-2 md:space-y-12 md:px-10 md:py-6">
       <Suspense fallback={null}>
@@ -48,7 +51,7 @@ const Resume = () => {
             </svg>
           </Button>
           <div className="w-full md:w-7/12" ref={divRef}>
-            <Document file="./assets/files/devin_blair_resume_fr.pdf">
+            <Document file="/assets/files/devin_blair_resume_fr.pdf">
               <div className="hidden md:flex">
                 <Page pageNumber={pageNumber} width={width} />
               </div>
