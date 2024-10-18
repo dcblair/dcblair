@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
+    "postbuild": "node scripts/postbuild.js",
     "dev": "remix vite:dev",
     "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|md)\"",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",

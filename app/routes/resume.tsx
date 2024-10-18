@@ -9,7 +9,7 @@ import 'react-pdf/dist/Page/TextLayer.css';
 
 // need this for react-pdf to work
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/legacy/build/pdf.worker.min.mjs',
+  'pdfjs-dist/build/pdf.worker.min.mjs',
   import.meta.url,
 ).toString();
 
