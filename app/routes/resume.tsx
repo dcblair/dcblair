@@ -90,7 +90,7 @@ const Resume = () => {
               variant="tertiary"
             >
               <h2 className="font-nunito text-xl font-bold tracking-wider">
-                LinkedIn
+                Download PDF
               </h2>
             </Card>
           </Link>
