@@ -1,7 +1,7 @@
 import { Suspense, useRef, useState } from 'react';
 import { useResizeObserver } from '~/hooks/useResizeObserver';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { Button, Card, Link } from '~/components';
+import { Button, Card } from '~/components';
 // enables link annotations
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 // enables text layer for accessibility, selection, search
@@ -69,7 +69,7 @@ const Resume = () => {
 
             {/* Resume */}
             <div className="w-full md:w-7/12" ref={divRef}>
-              <Document file="/assets/files/devin_blair_resume_fr.pdf">
+              <Document file="/devin_blair_resume_fr.pdf">
                 <div className="hidden md:flex">
                   <Page pageNumber={pageNumber} width={width} />
                 </div>
@@ -100,11 +100,12 @@ const Resume = () => {
 
           {/* Download link */}
           <div className="relative w-[calc(100%-16px)] md:size-fit">
-            <Link
+            <a
+              aria-label="download resume"
+              className="rounded-none px-3 py-2 focus:outline-2 focus:outline-black"
               rel="noreferrer"
               download
-              to="/assets/files/devin_blair_resume_fr.pdf"
-              variant="icon"
+              href="/devin_blair_resume_fr.pdf"
             >
               <Card
                 className="flex h-24 w-full items-center justify-center space-x-4 duration-2000 hover:bg-slate-300/20 hover:shadow-2xl hover:transition-all md:w-56"
@@ -114,7 +115,7 @@ const Resume = () => {
                   Download PDF
                 </h2>
               </Card>
-            </Link>
+            </a>
 
             {/* Lowest floating globe */}
             <div
