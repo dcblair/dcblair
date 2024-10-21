@@ -99,10 +99,10 @@ const Resume = () => {
           </div>
 
           {/* Download link */}
-          <div className="relative w-[calc(100%-16px)] md:size-fit">
+          <div className="relative flex w-full items-center justify-center">
             <a
               aria-label="download resume"
-              className="rounded-none px-3 py-2 focus:outline-2 focus:outline-black"
+              className="w-[calc(100%-16px)] rounded-none px-3 py-2 focus:outline-2 focus:outline-black md:size-fit"
               rel="noreferrer"
               download
               href="/devin_blair_resume_fr.pdf"
