@@ -1,4 +1,5 @@
 import { Card, Link } from '~/components';
+import { BusinessLogoCard } from '~/components/BusinessLogoCard/BusinessLogoCard';
 import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 
 const Experience = () => {
@@ -140,10 +141,29 @@ const Experience = () => {
         <div className="relative flex items-center">
           <Card>
             <div className="mb-4 space-y-1">
-              <h3 className="text-xl font-semibold">
-                Zeal Enterprises - Lead Frontend Engineer
-              </h3>
-              <h4 className="text-lg font-medium">January 2021 - July 2021</h4>
+              <div className="flex">
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    Zeal Enterprises - Lead Frontend Engineer
+                  </h3>
+                  <h4 className="text-lg font-medium">
+                    January 2021 - July 2021
+                  </h4>
+                </div>
+
+                {/* Zeal photo */}
+                <BusinessLogoCard
+                  className="flex md:hidden"
+                  icon={
+                    <img
+                      className="size-24"
+                      src="assets/images/zeal_logo.jpg"
+                      alt="Zeal official logo"
+                    />
+                  }
+                  withLink={false}
+                />
+              </div>
             </div>
 
             <ul className="space-y-1 rounded-md bg-gradient-to-b from-white/90 to-slate-100/85 p-6 text-sm tracking-wider shadow-lg">
@@ -178,18 +198,17 @@ const Experience = () => {
         </div>
 
         {/* Zeal photo */}
-        <div className="flex items-center justify-center">
-          <Card
-            className="h-32 w-[calc(100vw-16px)] duration-2000 hover:shadow-2xl hover:transition-all md:h-60 md:w-96"
-            variant="tertiary"
-          >
+        <BusinessLogoCard
+          className="hidden md:flex"
+          icon={
             <img
               className="size-24"
               src="assets/images/zeal_logo.jpg"
               alt="Zeal official logo"
             />
-          </Card>
-        </div>
+          }
+          withLink={false}
+        />
       </div>
     </div>
   );
