@@ -1,4 +1,4 @@
-import { Card, Link } from '~/components';
+import { Card } from '~/components';
 import { BusinessLogoCard } from '~/components/BusinessLogoCard/BusinessLogoCard';
 import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 
@@ -30,12 +30,24 @@ const Experience = () => {
           {/* Comcast */}
           <Card>
             <div className="mb-4 space-y-1">
-              <h3 className="text-lg font-semibold md:text-xl">
-                Comcast Business - Frontend Engineer IV
-              </h3>
-              <h4 className="text-base font-medium md:text-lg">
-                August 2022 - April 2024
-              </h4>
+              <div className="flex space-x-3">
+                <div className="flex flex-col justify-center space-y-2">
+                  <h3 className="text-base font-semibold md:text-xl">
+                    Comcast Business - Frontend Engineer IV
+                  </h3>
+                  <h4 className="text-base font-medium md:text-lg">
+                    August 2022 - April 2024
+                  </h4>
+                </div>
+
+                {/* Mobile Comcast photo */}
+                <BusinessLogoCard
+                  ariaLabel="Comcast Business"
+                  className="flex md:hidden"
+                  icon={<IconComcastBusiness />}
+                  to="https://business.comcast.com/"
+                />
+              </div>
             </div>
 
             <ul className="space-y-1 rounded-md bg-gradient-to-b from-white/90 to-slate-100/90 p-6 text-sm tracking-wider shadow-lg">
@@ -67,31 +79,35 @@ const Experience = () => {
         </div>
 
         {/* Comcast photo */}
-        <div className="flex items-center justify-center">
-          <Link
-            aria-label="Comcast Business"
-            target="_blank"
-            rel="noreferrer"
-            to="https://business.comcast.com/"
-            variant="icon"
-          >
-            <Card
-              className="h-32 w-[calc(100vw-16px)] duration-2000 hover:bg-slate-600/20 hover:shadow-2xl hover:transition-all md:h-60 md:w-96"
-              variant="tertiary"
-            >
-              <IconComcastBusiness />
-            </Card>
-          </Link>
-        </div>
+        <BusinessLogoCard
+          ariaLabel="Comcast Business"
+          className="hidden md:flex"
+          icon={<IconComcastBusiness />}
+          to="https://business.comcast.com/"
+        />
 
         {/* Canopy */}
         <div className="flex items-center">
           <Card>
             <div className="mb-4 space-y-1">
-              <h3 className="text-xl font-semibold">
-                Canopy Servicing - Software Engineer
-              </h3>
-              <h4 className="text-lg font-medium">July 2021 - July 2022</h4>
+              <div className="flex space-x-3">
+                <div className="flex flex-col justify-center space-y-2">
+                  <h3 className="text-base font-semibold md:text-xl">
+                    Canopy Servicing - Software Engineer
+                  </h3>
+                  <h4 className="text-sm font-medium md:text-lg">
+                    July 2021 - July 2022
+                  </h4>
+                </div>
+
+                {/* Mobile Canopy photo */}
+                <BusinessLogoCard
+                  ariaLabel="Canopy Servicing"
+                  className="flex md:hidden"
+                  icon={<IconCanopyServicing />}
+                  to="https://www.canopyservicing.com/canopyos"
+                />
+              </div>
             </div>
 
             <ul className="space-y-1 rounded-md bg-gradient-to-t from-white/90 to-slate-50/90 p-6 text-sm tracking-wider shadow-lg">
@@ -120,38 +136,29 @@ const Experience = () => {
           </Card>
         </div>
 
-        {/* Canopy photo */}
-        <div className="flex items-center justify-center">
-          <Link
-            aria-label="Canopy Servicing"
-            rel="noreferrer"
-            target="_blank"
-            to="https://www.canopyservicing.com/canopyos"
-          >
-            <Card
-              className="h-32 w-[calc(100vw-16px)] duration-2000 hover:bg-slate-600/20 hover:shadow-2xl hover:transition-all md:h-60 md:w-96"
-              variant="tertiary"
-            >
-              <IconCanopyServicing />
-            </Card>
-          </Link>
-        </div>
+        {/* Desktop Canopy logo card */}
+        <BusinessLogoCard
+          ariaLabel="Canopy Servicing"
+          className="hidden md:flex"
+          icon={<IconCanopyServicing />}
+          to="https://www.canopyservicing.com/canopyos"
+        />
 
         {/* Zeal */}
         <div className="relative flex items-center">
           <Card>
             <div className="mb-4 space-y-1">
-              <div className="flex">
-                <div>
-                  <h3 className="text-xl font-semibold">
+              <div className="flex space-x-3">
+                <div className="flex flex-col justify-center space-y-2">
+                  <h3 className="text-base font-semibold md:text-xl">
                     Zeal Enterprises - Lead Frontend Engineer
                   </h3>
-                  <h4 className="text-lg font-medium">
+                  <h4 className="text-sm font-medium md:text-lg">
                     January 2021 - July 2021
                   </h4>
                 </div>
 
-                {/* Zeal photo */}
+                {/* Mobile Zeal logo card */}
                 <BusinessLogoCard
                   className="flex md:hidden"
                   icon={
@@ -197,7 +204,7 @@ const Experience = () => {
           />
         </div>
 
-        {/* Zeal photo */}
+        {/* Desktop Zeal logo card */}
         <BusinessLogoCard
           className="hidden md:flex"
           icon={
