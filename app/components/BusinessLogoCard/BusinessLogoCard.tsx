@@ -18,6 +18,7 @@ const StyledCardWrapper = classed(
 );
 
 const BusinessLogoCardBase = ({
+  ariaLabel,
   icon: Icon,
   to,
   withLink = true,
@@ -27,7 +28,7 @@ const BusinessLogoCardBase = ({
     <StyledCardWrapper {...props}>
       {withLink ? (
         <Link
-          aria-label="Comcast Business"
+          aria-label={ariaLabel}
           target="_blank"
           rel="noreferrer"
           to={to ?? '/'}
