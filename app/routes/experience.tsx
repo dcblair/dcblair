@@ -35,7 +35,7 @@ const Experience = () => {
                   <h3 className="text-base font-semibold md:text-xl">
                     Comcast Business - Frontend Engineer IV
                   </h3>
-                  <h4 className="text-base font-medium md:text-lg">
+                  <h4 className="text-sm font-medium md:text-lg">
                     August 2022 - April 2024
                   </h4>
                 </div>
