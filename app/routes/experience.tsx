@@ -5,6 +5,7 @@ import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 const Experience = () => {
   return (
     <div className="grow-1 flex size-full flex-col items-center p-2 md:space-y-12 md:p-6">
+      {/* Experience */}
       <div className="relative mb-1 w-full md:w-fit">
         {/* Experience heading */}
         <Card
@@ -40,7 +41,7 @@ const Experience = () => {
                   </h4>
                 </div>
 
-                {/* Mobile Comcast photo */}
+                {/* Mobile Comcast logo card */}
                 <BusinessLogoCard
                   ariaLabel="Comcast Business"
                   className="flex md:hidden"
@@ -78,7 +79,7 @@ const Experience = () => {
           />
         </div>
 
-        {/* Comcast photo */}
+        {/* Desktop Comcast logo card */}
         <BusinessLogoCard
           ariaLabel="Comcast Business"
           className="hidden md:flex"
@@ -100,12 +101,12 @@ const Experience = () => {
                   </h4>
                 </div>
 
-                {/* Mobile Canopy photo */}
+                {/* Mobile Canopy logo card */}
                 <BusinessLogoCard
                   ariaLabel="Canopy Servicing"
                   className="flex md:hidden"
                   icon={<IconCanopyServicing />}
-                  to="https://www.canopyservicing.com/canopyos"
+                  to="https://www.canopyservicing.com"
                 />
               </div>
             </div>
@@ -141,7 +142,7 @@ const Experience = () => {
           ariaLabel="Canopy Servicing"
           className="hidden md:flex"
           icon={<IconCanopyServicing />}
-          to="https://www.canopyservicing.com/canopyos"
+          to="https://www.canopyservicing.com"
         />
 
         {/* Zeal */}
@@ -215,6 +216,123 @@ const Experience = () => {
             />
           }
           withLink={false}
+        />
+      </div>
+
+      {/* Projects */}
+      <div className="relative mb-1 w-full md:w-fit">
+        {/* Projects heading */}
+        <Card
+          className="w-full md:w-[25rem]"
+          header={
+            <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
+              Projects
+            </h2>
+          }
+          variant="secondary"
+        />
+
+        {/* Ligher floating globe */}
+        <div
+          aria-label="floating circle"
+          className="absolute -bottom-2 -left-20 -z-10 size-40 animate-floatSlow rounded-full bg-gradient-to-b from-slate-200 to-slate-600 bg-fixed shadow-md motion-reduce:animate-none"
+          role="img"
+        />
+      </div>
+
+      <div className="flex h-full w-full flex-col space-y-1 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-8">
+        <div className="relative flex items-center">
+          {/* Aura */}
+          <Card>
+            <div className="mb-4 space-y-1">
+              <div className="flex space-x-3">
+                <div className="flex flex-col justify-center space-y-2">
+                  <h3 className="text-base font-semibold md:text-xl">
+                    Aura - Component Library
+                  </h3>
+                  <h4 className="text-sm font-medium md:text-lg">
+                    2021 - 2022
+                  </h4>
+                  {/* TODO: grab icons */}
+                  <p className="text-sm font-medium">
+                    Tech Stack: React, Typescript, Tailwind, Storybook, Headless
+                    UI
+                  </p>
+                </div>
+
+                {/* TODO: Grab asset for aura */}
+                {/* Mobile Aura logo card */}
+                <BusinessLogoCard
+                  ariaLabel="Aura Component Library"
+                  className="flex md:hidden"
+                  icon={<span>aura logo</span>}
+                  to="https://aura.canopyservicing.com/?path=/docs/welcome--docs"
+                />
+              </div>
+            </div>
+
+            <ul className="space-y-1 rounded-md bg-gradient-to-b from-white/90 to-slate-100/90 p-6 text-sm tracking-wider shadow-lg">
+              <li>•</li>
+              <li>•</li>
+              <li>•</li>
+            </ul>
+          </Card>
+
+          {/* Floating globe */}
+          <div
+            aria-label="second floating circle"
+            className="absolute -bottom-16 -left-8 -z-10 size-64 rotate-1 transform animate-floatSlow rounded-full bg-gradient-to-br from-slate-400 to-black bg-fixed motion-reduce:animate-none md:size-24"
+            role="img"
+          />
+        </div>
+
+        {/* Desktop Aura logo card */}
+        <BusinessLogoCard
+          ariaLabel="Aura Component Library"
+          className="hidden md:flex"
+          icon={<span>aura icon here</span>}
+          to="https://aura.canopyservicing.com/?path=/docs/welcome--docs"
+        />
+
+        {/* Canopy OS */}
+        <div className="flex items-center">
+          <Card>
+            <div className="mb-4 space-y-1">
+              <div className="flex space-x-3">
+                <div className="flex flex-col justify-center space-y-2">
+                  <h3 className="text-base font-semibold md:text-xl">
+                    Canopy OS - Lending Platform
+                  </h3>
+                  <h4 className="text-sm font-medium md:text-lg">
+                    2021 - 2022
+                  </h4>
+                </div>
+
+                {/* Mobile Canopy OS logo card */}
+                <BusinessLogoCard
+                  ariaLabel="Canopy OS"
+                  className="flex md:hidden"
+                  icon={<IconCanopyServicing />}
+                  to="https://www.canopyservicing.com/canopyos"
+                />
+              </div>
+            </div>
+
+            <ul className="space-y-1 rounded-md bg-gradient-to-t from-white/90 to-slate-50/90 p-6 text-sm tracking-wider shadow-lg">
+              <li>•</li>
+              <li>•</li>
+              <li>•</li>
+              <li>•</li>
+            </ul>
+          </Card>
+        </div>
+
+        {/* Desktop Canopy OS logo card */}
+        <BusinessLogoCard
+          ariaLabel="Canopy OS"
+          className="hidden md:flex"
+          icon={<IconCanopyServicing />}
+          to="https://www.canopyservicing.com/canopyos"
         />
       </div>
     </div>
