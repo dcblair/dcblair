@@ -26,4 +26,4 @@ npm run storybook
 
 2. Navigate to localhost:6006
 
-Nore information about Storybook [here](https://storybook.js.org)
+More information about Storybook [here](https://storybook.js.org)
