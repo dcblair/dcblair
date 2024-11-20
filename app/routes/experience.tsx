@@ -1,10 +1,43 @@
-import { Card } from '~/components';
+import { classed } from '@tw-classed/react';
+import { useEffect, useState } from 'react';
+import {
+  Button,
+  Card,
+  Link,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '~/components';
 import { BusinessLogoCard } from '~/components/BusinessLogoCard/BusinessLogoCard';
 import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 
+const StyledButton = classed(Button, 'transition-opacity duration-2000', {
+  variants: {
+    hasScrolled: {
+      true: 'flex opacity-100',
+      false: 'hidden opacity-0',
+    },
+  },
+});
+
 const Experience = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () =>
+      window.scrollY > 0 ? setHasScrolled(true) : setHasScrolled(false);
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleScrollToTop = () => {
+    return window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className="grow-1 flex size-full flex-col items-center p-2 md:space-y-12 md:p-6">
+    <div className="grow-1 relative flex size-full flex-col items-center p-2 md:space-y-12 md:p-6">
       {/* Experience */}
       <div className="relative mb-1 w-full md:w-fit">
         {/* Experience heading */}
@@ -225,9 +258,17 @@ const Experience = () => {
         <Card
           className="w-full md:w-[25rem]"
           header={
-            <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
-              Projects
-            </h2>
+            <>
+              <Link
+                className="invisible hover:visible focus:visible"
+                to="#projects"
+              >
+                #
+              </Link>
+              <h2 className="font-nunito text-2.5xl font-bold text-slate-900">
+                Projects
+              </h2>
+            </>
           }
           variant="secondary"
         />
@@ -334,6 +375,36 @@ const Experience = () => {
           icon={<IconCanopyServicing />}
           to="https://www.canopyservicing.com/canopyos"
         />
+      </div>
+
+      {/* Scroll to top button */}
+      <div className="fixed bottom-20 right-20">
+        <Tooltip>
+          <TooltipTrigger>
+            <StyledButton
+              aria-label="Scroll to top"
+              hasScrolled={hasScrolled}
+              iconOnly
+              onClick={handleScrollToTop}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={4}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 15l7-7 7 7"
+                />
+              </svg>
+            </StyledButton>
+          </TooltipTrigger>
+          <TooltipContent>Scroll to top</TooltipContent>
+        </Tooltip>
       </div>
     </div>
   );
