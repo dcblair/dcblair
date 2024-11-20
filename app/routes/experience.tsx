@@ -1,41 +1,8 @@
-import { classed } from '@tw-classed/react';
-import { useEffect, useState } from 'react';
-import {
-  Button,
-  Card,
-  Link,
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '~/components';
+import { Card, Link } from '~/components';
 import { BusinessLogoCard } from '~/components/BusinessLogoCard/BusinessLogoCard';
 import { IconCanopyServicing, IconComcastBusiness } from '~/components/Icons';
 
-const StyledButton = classed(Button, 'transition-opacity duration-2000', {
-  variants: {
-    hasScrolled: {
-      true: 'flex opacity-100',
-      false: 'hidden opacity-0',
-    },
-  },
-});
-
 const Experience = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () =>
-      window.scrollY > 0 ? setHasScrolled(true) : setHasScrolled(false);
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const handleScrollToTop = () => {
-    return window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-  };
-
   return (
     <div className="grow-1 relative flex size-full flex-col items-center p-2 md:space-y-12 md:p-6">
       {/* Experience */}
@@ -313,9 +280,20 @@ const Experience = () => {
             </div>
 
             <ul className="space-y-1 rounded-md bg-gradient-to-b from-white/90 to-slate-100/90 p-6 text-sm tracking-wider shadow-lg">
-              <li>•</li>
-              <li>•</li>
-              <li>•</li>
+              <li>
+                • Custom component development: Built custom components,
+                including Select and Dropdown, enhancing the library&apos;s
+                functionality and usability.
+              </li>
+              <li>
+                • Pixel-perfect design: Maintained and iterated on component
+                designs to ensure pixel perfection and consistency with the API,
+                working closely with the Head of Design, QA, and Engineering
+              </li>
+              <li>
+                • Unit testing: Implemented thorough unit tests to ensure
+                component stability and reduce the risk of bugs
+              </li>
             </ul>
           </Card>
 
@@ -331,7 +309,13 @@ const Experience = () => {
         <BusinessLogoCard
           ariaLabel="Aura Component Library"
           className="hidden md:flex"
-          icon={<span>aura icon here</span>}
+          icon={
+            <img
+              alt="Canopy Servicing - aura design system"
+              className="w-48 rounded-lg"
+              src="/assets/images/aura_logo.png"
+            />
+          }
           to="https://aura.canopyservicing.com/?path=/docs/welcome--docs"
         />
 
@@ -360,10 +344,21 @@ const Experience = () => {
             </div>
 
             <ul className="space-y-1 rounded-md bg-gradient-to-t from-white/90 to-slate-50/90 p-6 text-sm tracking-wider shadow-lg">
-              <li>•</li>
-              <li>•</li>
-              <li>•</li>
-              <li>•</li>
+              <li>
+                • Developed several key pages: Crafted multiple pages for the
+                client loan management dashboard, enhancing user experience and
+                functionality
+              </li>
+              <li>
+                • Cross-functional collaboration: Worked closely with QA,
+                Backend, Product, and Marketing teams in fast-paced sprint
+                cycles to deliver robust features and improvements{' '}
+              </li>
+              <li>
+                • Codebase maintenance and upgrades: Routinely maintained and
+                upgraded the codebase, ensuring optimal performance and
+                compliance with the latest standards
+              </li>
             </ul>
           </Card>
         </div>
@@ -375,36 +370,6 @@ const Experience = () => {
           icon={<IconCanopyServicing />}
           to="https://www.canopyservicing.com/canopyos"
         />
-      </div>
-
-      {/* Scroll to top button */}
-      <div className="fixed bottom-20 right-20">
-        <Tooltip>
-          <TooltipTrigger>
-            <StyledButton
-              aria-label="Scroll to top"
-              hasScrolled={hasScrolled}
-              iconOnly
-              onClick={handleScrollToTop}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={4}
-                stroke="currentColor"
-                className="h-6 w-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M5 15l7-7 7 7"
-                />
-              </svg>
-            </StyledButton>
-          </TooltipTrigger>
-          <TooltipContent>Scroll to top</TooltipContent>
-        </Tooltip>
       </div>
     </div>
   );
