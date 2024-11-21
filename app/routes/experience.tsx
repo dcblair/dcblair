@@ -220,7 +220,7 @@ const Experience = () => {
       </div>
 
       {/* Projects */}
-      <div className="relative mb-1 w-full md:w-fit">
+      <div className="relative mb-1 mt-6 w-full md:w-fit">
         {/* Projects heading */}
         <Card
           className="w-full md:w-[25rem]"
@@ -248,7 +248,7 @@ const Experience = () => {
         />
       </div>
 
-      <div className="flex h-full w-full flex-col space-y-1 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-3 md:gap-8">
+      <div className="flex size-full flex-col space-y-1 md:grid md:grid-flow-row md:grid-cols-2 md:grid-rows-2 md:gap-8">
         <div className="relative flex items-center">
           {/* Aura */}
           <Card>
