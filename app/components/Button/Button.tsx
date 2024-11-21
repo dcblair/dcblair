@@ -49,7 +49,7 @@ const StyledButton = classed(
       {
         variant: 'secondary',
         iconOnly: false,
-        className: 'rounded-full',
+        className: 'rounded-full focus:outline-2 focus:outline-sky-900',
       },
     ],
   },
