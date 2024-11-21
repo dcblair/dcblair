@@ -262,8 +262,9 @@ const Experience = () => {
                     2021 - 2022
                   </h4>
                   <p className="text-xs font-medium md:text-sm">
-                    Tech Stack: React, Typescript, Tailwind, Storybook, Headless
-                    UI
+                    Tech Stack: Headless-UI, HTML5, CSS3, Jest, React,
+                    Storybook, TailwindCSS, Testing Library, tw-classed,
+                    TypeScript
                   </p>
                 </div>
 
@@ -335,6 +336,12 @@ const Experience = () => {
                   <h4 className="text-sm font-medium md:text-lg">
                     2021 - 2022
                   </h4>
+                  <p className="text-xs font-medium md:text-sm">
+                    Tech Stack: AntD, AWS Amplify, Axios, Cognito, Datadog,
+                    Headless UI, HTML5, CSS3, Jest, MaterialUI, MSW, Next.js,
+                    React, Storybook, SWR, TailwindCSS, Testing Library,
+                    TypeScript
+                  </p>
                 </div>
 
                 {/* Mobile Canopy OS logo card */}
