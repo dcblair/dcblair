@@ -1,7 +1,7 @@
 import { Suspense, useRef, useState } from 'react';
 import { useResizeObserver } from '~/hooks/useResizeObserver';
 import { Document, Page, pdfjs } from 'react-pdf';
-import { Button, Card } from '~/components';
+import { Button, Card, LoadingSpinner } from '~/components';
 // enables link annotations
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 // enables text layer for accessibility, selection, search
@@ -18,8 +18,6 @@ const Resume = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
   const { width } = useResizeObserver({ ref: divRef });
 
-  // todo: add scroll prevention
-
   const handlePageChange = (direction: 'back' | 'forward') => {
     setPageNumber((prevPageNumber) => {
       if (direction === 'forward' && prevPageNumber < 2) {
@@ -30,6 +28,9 @@ const Resume = () => {
       return prevPageNumber - 1;
     });
   };
+
+  // aspect ratio for document
+  const aspectRatio = 11 / 8.5;
 
   return (
     <div className="grow-1 relative flex size-full flex-col items-center p-2 md:space-y-12 md:px-10 md:py-6">
@@ -68,8 +69,22 @@ const Resume = () => {
             </Button>
 
             {/* Resume */}
-            <div className="w-full md:w-7/12" ref={divRef}>
-              <Document file="/devin_blair_resume_fr.pdf">
+            <div
+              className="w-full md:w-7/12"
+              ref={divRef}
+              style={{ minHeight: `${width * aspectRatio}px` }}
+            >
+              <Document
+                file="/devin_blair_resume_fr.pdf"
+                loading={
+                  <div
+                    className="flex size-full flex-col items-center justify-center"
+                    style={{ minHeight: `${width * aspectRatio}px` }}
+                  >
+                    <LoadingSpinner />
+                  </div>
+                }
+              >
                 <div className="hidden md:flex">
                   <Page pageNumber={pageNumber} width={width} />
                 </div>
